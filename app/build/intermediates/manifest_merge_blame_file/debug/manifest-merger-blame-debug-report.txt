@@ -1,0 +1,85 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.sateda.keyonekb"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="25"
+8-->C:\Users\MikhailKrupski\AndroidStudioProjects\KeyoneKB\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="25" />
+9-->C:\Users\MikhailKrupski\AndroidStudioProjects\KeyoneKB\app\src\main\AndroidManifest.xml
+10
+11    <application
+11-->C:\Users\MikhailKrupski\AndroidStudioProjects\KeyoneKB\app\src\main\AndroidManifest.xml:5:5-36:19
+12        android:allowBackup="true"
+12-->C:\Users\MikhailKrupski\AndroidStudioProjects\KeyoneKB\app\src\main\AndroidManifest.xml:6:9-35
+13        android:debuggable="true"
+14        android:extractNativeLibs="false"
+15        android:icon="@mipmap/ic_launcher"
+15-->C:\Users\MikhailKrupski\AndroidStudioProjects\KeyoneKB\app\src\main\AndroidManifest.xml:7:9-43
+16        android:label="@string/app_name"
+16-->C:\Users\MikhailKrupski\AndroidStudioProjects\KeyoneKB\app\src\main\AndroidManifest.xml:8:9-41
+17        android:roundIcon="@mipmap/ic_launcher_round"
+17-->C:\Users\MikhailKrupski\AndroidStudioProjects\KeyoneKB\app\src\main\AndroidManifest.xml:9:9-54
+18        android:supportsRtl="true"
+18-->C:\Users\MikhailKrupski\AndroidStudioProjects\KeyoneKB\app\src\main\AndroidManifest.xml:10:9-35
+19        android:testOnly="true"
+20        android:theme="@style/AppTheme" >
+20-->C:\Users\MikhailKrupski\AndroidStudioProjects\KeyoneKB\app\src\main\AndroidManifest.xml:11:9-40
+21        <activity android:name="com.sateda.keyonekb.SettingsActivity" />
+21-->C:\Users\MikhailKrupski\AndroidStudioProjects\KeyoneKB\app\src\main\AndroidManifest.xml:12:9-63
+21-->C:\Users\MikhailKrupski\AndroidStudioProjects\KeyoneKB\app\src\main\AndroidManifest.xml:12:19-51
+22        <activity android:name="com.sateda.keyonekb.KeyboardTestActivity" />
+22-->C:\Users\MikhailKrupski\AndroidStudioProjects\KeyoneKB\app\src\main\AndroidManifest.xml:13:9-67
+22-->C:\Users\MikhailKrupski\AndroidStudioProjects\KeyoneKB\app\src\main\AndroidManifest.xml:13:19-55
+23        <activity
+23-->C:\Users\MikhailKrupski\AndroidStudioProjects\KeyoneKB\app\src\main\AndroidManifest.xml:14:9-22:20
+24            android:name="com.sateda.keyonekb.MainActivity"
+24-->C:\Users\MikhailKrupski\AndroidStudioProjects\KeyoneKB\app\src\main\AndroidManifest.xml:15:13-41
+25            android:label="@string/app_name" >
+25-->C:\Users\MikhailKrupski\AndroidStudioProjects\KeyoneKB\app\src\main\AndroidManifest.xml:16:13-45
+26            <intent-filter>
+26-->C:\Users\MikhailKrupski\AndroidStudioProjects\KeyoneKB\app\src\main\AndroidManifest.xml:17:13-21:29
+27                <action android:name="android.intent.action.MAIN" />
+27-->C:\Users\MikhailKrupski\AndroidStudioProjects\KeyoneKB\app\src\main\AndroidManifest.xml:18:17-69
+27-->C:\Users\MikhailKrupski\AndroidStudioProjects\KeyoneKB\app\src\main\AndroidManifest.xml:18:25-66
+28
+29                <category android:name="android.intent.category.LAUNCHER" />
+29-->C:\Users\MikhailKrupski\AndroidStudioProjects\KeyoneKB\app\src\main\AndroidManifest.xml:20:17-77
+29-->C:\Users\MikhailKrupski\AndroidStudioProjects\KeyoneKB\app\src\main\AndroidManifest.xml:20:27-74
+30            </intent-filter>
+31        </activity>
+32
+33        <service
+33-->C:\Users\MikhailKrupski\AndroidStudioProjects\KeyoneKB\app\src\main\AndroidManifest.xml:24:9-35:19
+34            android:name="com.sateda.keyonekb.KeyoneIME"
+34-->C:\Users\MikhailKrupski\AndroidStudioProjects\KeyoneKB\app\src\main\AndroidManifest.xml:25:13-38
+35            android:label="@string/app_name"
+35-->C:\Users\MikhailKrupski\AndroidStudioProjects\KeyoneKB\app\src\main\AndroidManifest.xml:26:13-45
+36            android:permission="android.permission.BIND_INPUT_METHOD" >
+36-->C:\Users\MikhailKrupski\AndroidStudioProjects\KeyoneKB\app\src\main\AndroidManifest.xml:27:13-70
+37            <intent-filter>
+37-->C:\Users\MikhailKrupski\AndroidStudioProjects\KeyoneKB\app\src\main\AndroidManifest.xml:28:13-30:29
+38                <action android:name="android.view.InputMethod" />
+38-->C:\Users\MikhailKrupski\AndroidStudioProjects\KeyoneKB\app\src\main\AndroidManifest.xml:29:17-67
+38-->C:\Users\MikhailKrupski\AndroidStudioProjects\KeyoneKB\app\src\main\AndroidManifest.xml:29:25-64
+39            </intent-filter>
+40
+41            <meta-data
+41-->C:\Users\MikhailKrupski\AndroidStudioProjects\KeyoneKB\app\src\main\AndroidManifest.xml:32:13-34:50
+42                android:name="android.view.im"
+42-->C:\Users\MikhailKrupski\AndroidStudioProjects\KeyoneKB\app\src\main\AndroidManifest.xml:33:17-47
+43                android:resource="@xml/method" />
+43-->C:\Users\MikhailKrupski\AndroidStudioProjects\KeyoneKB\app\src\main\AndroidManifest.xml:34:17-47
+44        </service>
+45
+46        <meta-data
+46-->[com.android.support:appcompat-v7:25.4.0] C:\Users\MikhailKrupski\.gradle\caches\transforms-2\files-2.1\fb880b665acb41ba5f7e8ee05489dc10\appcompat-v7-25.4.0\AndroidManifest.xml:26:9-28:38
+47            android:name="android.support.VERSION"
+47-->[com.android.support:appcompat-v7:25.4.0] C:\Users\MikhailKrupski\.gradle\caches\transforms-2\files-2.1\fb880b665acb41ba5f7e8ee05489dc10\appcompat-v7-25.4.0\AndroidManifest.xml:27:13-51
+48            android:value="25.4.0" />
+48-->[com.android.support:appcompat-v7:25.4.0] C:\Users\MikhailKrupski\.gradle\caches\transforms-2\files-2.1\fb880b665acb41ba5f7e8ee05489dc10\appcompat-v7-25.4.0\AndroidManifest.xml:28:13-35
+49    </application>
+50
+51</manifest>
