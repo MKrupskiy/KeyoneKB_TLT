@@ -220,7 +220,7 @@ public class AppSettings {
     }
 
     public boolean isUpdateAvailable() {
-        if (this.availableUpdateVersion == null && this.availableUpdateVersion.length() == 0) {
+        if (this.availableUpdateVersion == null || this.availableUpdateVersion.length() == 0) {
             return false;
         }
         float currentVer = Float.parseFloat(BuildConfig.VERSION_NAME);

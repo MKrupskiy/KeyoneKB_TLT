@@ -22,7 +22,7 @@ public class CheckVersionReceiver extends BroadcastReceiver {
     public static final String ACTION_CHECK_UPDATE = "by.mkr.blackberry.textlayouttools.layoutnotification.handlers.action.CHECK_UPDATE";
     private static final int RECEIVER_REQUEST_CODE = 9113;
     private static final int HOURS = 1000 * 60 * 60;
-    private static final int CHECK_PERIOD = 1000 * 60 ;//17 * HOURS;
+    private static final int CHECK_PERIOD = 17 * HOURS;
 
     public CheckVersionReceiver() {
         super();
