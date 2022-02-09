@@ -8,6 +8,12 @@
         android:minSdkVersion="25"
         android:targetSdkVersion="25" />
 
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
     <application
         android:allowBackup="true"
         android:debuggable="true"
@@ -29,6 +35,32 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="by.mkr.blackberry.textlayouttools.SettingsActivity" />
+        <activity android:name="by.mkr.blackberry.textlayouttools.CorrectionsActivity" />
+        <activity
+            android:name="by.mkr.blackberry.textlayouttools.AddToDictionaryActivity"
+            android:label="Добавить в словарь TLT"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.PROCESS_TEXT" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="by.mkr.blackberry.textlayouttools.ReplacerActivity"
+            android:label="ntrcn -> текст"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.PROCESS_TEXT" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+        </activity>
 
         <service
             android:name="com.sateda.keyonekb.KeyoneIME"
@@ -42,6 +74,19 @@
                 android:name="android.view.im"
                 android:resource="@xml/method" />
         </service>
+
+        <receiver
+            android:name="by.mkr.blackberry.textlayouttools.LanguageNotificationReceiver"
+            android:enabled="true"
+            android:exported="true" />
+        <receiver
+            android:name="by.mkr.blackberry.textlayouttools.CheckVersionReceiver"
+            android:enabled="true"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="by.mkr.blackberry.textlayouttools.layoutnotification.handlers.action.CHECK_UPDATE" />
+            </intent-filter>
+        </receiver>
 
         <meta-data
             android:name="android.support.VERSION"

@@ -17,7 +17,7 @@
 	<key scan_code="33" one_press="1092" shift="1060" />
 	<key scan_code="34" one_press="1075" shift="1043" />
 	<key scan_code="35" one_press="1095" shift="1063" />
-	<key scan_code="36" one_press="1081" shift="1049" double_press="235" double_press_shift="203"/>
+	<key scan_code="36" one_press="1081" shift="1049" double_press="1105" double_press_shift="1025"/>
 	<key scan_code="37" one_press="1082" shift="1050" />
 	<key scan_code="38" one_press="1083" shift="1051" />
 	

@@ -19,4 +19,12 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/btn_settings"
         android:text="@string/btn_test_key" />
+
+    <Button
+        android:id="@+id/btn_tlt_settings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_test_key"
+        android:text="@string/btn_tlt_settings"
+        android:layout_marginTop="64px"/>
 </RelativeLayout>

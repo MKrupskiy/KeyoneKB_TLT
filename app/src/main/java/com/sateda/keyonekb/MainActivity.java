@@ -19,6 +19,7 @@ public class MainActivity extends Activity {
 
     private Button btn_test_key;
     private Button btn_settings;
+    private Button btn_tlt_settings;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +28,7 @@ public class MainActivity extends Activity {
 
         btn_settings = (Button) findViewById(R.id.btn_settings);
         btn_test_key = (Button) findViewById(R.id.btn_test_key);
+        btn_tlt_settings = (Button) findViewById(R.id.btn_tlt_settings);
 
         btn_settings.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -39,6 +41,13 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View view) {
                 setTestKeyActivity();
+            }
+        });
+
+        btn_tlt_settings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                setTltSettingsActivity();
             }
         });
 
@@ -64,4 +73,8 @@ public class MainActivity extends Activity {
         startActivity(switchActivityIntent);
     }
 
+    private void setTltSettingsActivity() {
+        Intent switchActivityIntent = new Intent(this, by.mkr.blackberry.textlayouttools.SettingsActivity.class);
+        startActivity(switchActivityIntent);
+    }
 }

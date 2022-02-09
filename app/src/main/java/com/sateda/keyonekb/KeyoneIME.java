@@ -1,40 +1,58 @@
 package com.sateda.keyonekb;
 
 import android.annotation.SuppressLint;
-import android.app.ActivityManager;
+import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
-import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.graphics.Color;
 import android.inputmethodservice.InputMethodService;
 import android.inputmethodservice.Keyboard;
 import android.inputmethodservice.KeyboardView;
 import android.media.AudioManager;
+import android.net.Uri;
+import android.os.Environment;
+import android.preference.PreferenceManager;
 import android.support.v4.app.NotificationCompat;
 import android.text.InputType;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.View;
-import android.view.WindowManager;
+import android.view.inputmethod.CorrectionInfo;
 import android.view.inputmethod.EditorInfo;
-import android.view.inputmethod.InputBinding;
 import android.view.inputmethod.InputConnection;
-import android.view.inputmethod.InputMethodManager;
 import android.view.textservice.SentenceSuggestionsInfo;
 import android.view.textservice.SpellCheckerSession;
 import android.view.textservice.SuggestionsInfo;
 import android.widget.Toast;
-
 import org.xmlpull.v1.XmlPullParser;
+import java.io.File;
+import java.util.Calendar;
 
+import by.mkr.blackberry.textlayouttools.ActionType;
+import by.mkr.blackberry.textlayouttools.AppSettings;
+import by.mkr.blackberry.textlayouttools.Language;
+import by.mkr.blackberry.textlayouttools.LanguageDetector;
+import by.mkr.blackberry.textlayouttools.LanguageNotificationReceiver;
+import by.mkr.blackberry.textlayouttools.LayoutConverter;
+import by.mkr.blackberry.textlayouttools.ReplaceValues;
+import by.mkr.blackberry.textlayouttools.ReplacerService;
+import by.mkr.blackberry.textlayouttools.SoundManager;
+import by.mkr.blackberry.textlayouttools.SoundPattern;
+import by.mkr.blackberry.textlayouttools.VibrationManager;
+import by.mkr.blackberry.textlayouttools.VibrationPattern;
+import by.mkr.blackberry.textlayouttools.WordsList;
 import static android.content.ContentValues.TAG;
-import static android.view.View.INVISIBLE;
+import static com.sateda.keyonekb.ICHelper.CHARS_TO_GET;
 
-public class KeyoneIME extends InputMethodService implements KeyboardView.OnKeyboardActionListener, SpellCheckerSession.SpellCheckerSessionListener, View.OnTouchListener {
+
+public class KeyoneIME extends InputMethodService
+        implements KeyboardView.OnKeyboardActionListener,
+        SpellCheckerSession.SpellCheckerSessionListener,
+        View.OnTouchListener,
+        SharedPreferences.OnSharedPreferenceChangeListener {
 
     private static final int MAX_KEY_COUNT = 50;
     private static final boolean DEBUG = true;
@@ -49,6 +67,9 @@ public class KeyoneIME extends InputMethodService implements KeyboardView.OnKeyb
     public static final String APP_PREFERENCES_SYMPAD = "sympad";
     public static final String APP_PREFERENCES_FLAG = "flag";
     public static final String APP_PREFERENCES_CURR_LANG = "pref_curr_lang";
+
+
+    private static ReplacerService _replacerService;
 
     private NotificationManager notificationManager;
     private CandidateView mCandidateView;
@@ -96,7 +117,11 @@ public class KeyoneIME extends InputMethodService implements KeyboardView.OnKeyb
 
     private float touchX;
 
-    private android.support.v7.app.NotificationCompat.Builder builder;
+
+    // Props to check if a notification needs update
+    NotificationProperties _prevNotificationprops;
+
+    //private android.support.v7.app.NotificationCompat.Builder builder;
     private StringBuilder mComposing = new StringBuilder();
 
 
@@ -125,10 +150,21 @@ public class KeyoneIME extends InputMethodService implements KeyboardView.OnKeyb
 
     private boolean pref_touch_keyboard = false;
 
+    private WordsList _wordsListRu;
+    private WordsList _wordsListEn;
+    private int _lastAutoReplaced;
+    private ActionType _lastActionType;
+    Language _currentLanguage;
+    AppSettings _appSettings;
+    VibrationManager _vibrationManager;
+
+
     @SuppressLint("ClickableViewAccessibility")
     @Override
     public void onCreate() {
         super.onCreate();
+
+        Log.d(TAG, "Keyboard started");
 
         mShiftPressTime = 0;
         shiftPressFirstButtonBig = false;
@@ -154,6 +190,9 @@ public class KeyoneIME extends InputMethodService implements KeyboardView.OnKeyb
         initKeys();
         mSettings = getSharedPreferences(APP_PREFERENCES, Context.MODE_PRIVATE);
         loadSetting();
+        // Init Replacer service
+        _replacerService = new ReplacerService(this);
+        _appSettings = ReplacerService.getAppSettings();
 
         keyboard_empty = new Keyboard(this, R.xml.space_empty);
         keyboard_symbol = new Keyboard(this, R.xml.symbol);
@@ -166,25 +205,77 @@ public class KeyoneIME extends InputMethodService implements KeyboardView.OnKeyb
         keyboardView.clearAnimation();
         keyboardView.showFlag(pref_flag);
 
-        notificationManager = (NotificationManager) getApplicationContext().getSystemService(Context.NOTIFICATION_SERVICE);
-        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
-        intent.setClassName("com.sateda.keyonekb.satedakeyboard", "com.sateda.keyboard.keyonekb.MainActivity");
-        PendingIntent pendingIntent = PendingIntent.getActivity(getApplicationContext(), 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+        initNotificationManager();
 
-        builder = new android.support.v7.app.NotificationCompat.Builder(getApplicationContext());
-
-        builder.setSmallIcon(R.mipmap.ic_rus_small);
-        builder.setContentTitle("Русский");
-        builder.setOngoing(true);
-        builder.setAutoCancel(false);
-        builder.setVisibility(NotificationCompat.VISIBILITY_SECRET);
-        builder.setPriority(NotificationCompat.PRIORITY_DEFAULT);
-        notificationManager.notify(1, builder.build());
+        // Init TLT props
+        _lastActionType = ActionType.None;
+        _wordsListRu = new WordsList(this, Language.Ru);
+        _wordsListEn = new WordsList(this, Language.En);
+        _vibrationManager = new VibrationManager(getApplicationContext());
+        // Register settings listener
+        SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
+        sharedPrefs.registerOnSharedPreferenceChangeListener(this);
 
         // Fix for the first load as the method increases value immediately
         langNum--;
         ChangeLanguage();
+    }
+
+    private void initNotificationManager() {
+        notificationManager = (NotificationManager) getApplicationContext().getSystemService(Context.NOTIFICATION_SERVICE);
+
+        NotificationCompat.Builder builder = new android.support.v7.app.NotificationCompat.Builder(getApplicationContext());
+
+        builder.setVisibility(NotificationCompat.VISIBILITY_SECRET)
+                .setPriority(Notification.PRIORITY_DEFAULT)
+                .setShowWhen(false)
+                .setOnlyAlertOnce(true)
+                .setOngoing(true)
+                .setSmallIcon(R.mipmap.ic_rus_small)
+                .setContentTitle("Русский");
+        notificationManager.notify(1, builder.build());
+
+        _prevNotificationprops = getNotificationProps();
+        _prevNotificationprops.langNum = -1; // Always update on start
+    }
+
+    private NotificationProperties getNotificationProps() {
+        return new NotificationProperties(
+                navigationSymbol,
+                fnSymbol,
+                pref_sympad,
+                showSymbol,
+                altShift,
+                altPressAllButtonBig,
+                altPressFirstButtonBig,
+                shiftPressAllButtonBig,
+                langNum,
+                pref_touch_keyboard,
+                shiftPressFirstButtonBig,
+
+                _appSettings.isEnabled,
+                _appSettings.isAutoCorrect,
+                _appSettings.whenEnableNotifications
+        );
+    }
+    private boolean notificationPropsHaveChanged(NotificationProperties compareTo) {
+        //ReplacerService.log("** new:" + _appSettings.isAutoCorrect + " prev:" + compareTo.isAutoCorrect);
+        return !(navigationSymbol == compareTo.navigationSymbol
+                && fnSymbol == compareTo.fnSymbol
+                && pref_sympad == compareTo.pref_sympad
+                && showSymbol == compareTo.showSymbol
+                && altShift == compareTo.altShift
+                && altPressAllButtonBig == compareTo.altPressAllButtonBig
+                && altPressFirstButtonBig == compareTo.altPressFirstButtonBig
+                && shiftPressAllButtonBig == compareTo.shiftPressAllButtonBig
+                && langNum == compareTo.langNum
+                && pref_touch_keyboard == compareTo.pref_touch_keyboard
+                && shiftPressFirstButtonBig == compareTo.shiftPressFirstButtonBig
+
+                && _appSettings.isEnabled == compareTo.isEnabled
+                && _appSettings.isAutoCorrect == compareTo.isAutoCorrect
+                && _appSettings.whenEnableNotifications == compareTo.whenEnableNotifications
+        );
     }
 
     private void loadSetting(){
@@ -389,6 +480,7 @@ public class KeyoneIME extends InputMethodService implements KeyboardView.OnKeyb
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
+        ReplacerService.log(" * onKeyDown: " + keyCode);
         keyboardView.hidePopup(false);
         Log.d(TAG, "onKeyDown "+event);
         if(fixBbkLauncher &&  !this.isInputViewShown() && event.getScanCode() != 11){
@@ -413,12 +505,82 @@ public class KeyoneIME extends InputMethodService implements KeyboardView.OnKeyb
         int navigationKeyCode = 0;
         int code = 0;
 
+
+
+
+        // TLT:
+        try {
+            _lastActionType = ActionType.None;
+
+            // Ctrl+Q:
+            if (_appSettings.isEnabled
+                    && ctrlPressed && event.getKeyCode() == _appSettings.selectedShortCut
+            ) {
+                ReplacerService.log("---Ctrl+Q:---");
+
+                CharSequence textSelected = ic.getSelectedText(0);
+                ReplacerService.log("textSelected: " + textSelected);
+
+                if (textSelected != null) {
+                    // Convert selected text
+                    int cursorPos = ICHelper.getCursorPos(ic);
+                    ReplacerService.log("cursor pos: " + cursorPos);
+
+                    String newWord = ICHelper.getReplacedWord(textSelected.toString(), _appSettings);
+
+                    ICHelper.PerformReplace(ic,
+                            cursorPos + textSelected.length(), // set to the end of selection
+                            cursorPos,
+                            textSelected.toString(),
+                            newWord);
+
+                    _replacerService.addToTempDictionary(newWord, textSelected.toString());
+                } else {
+                    // nothing selected, get the nearest word
+                    int cursorPos = ICHelper.getCursorPos(ic);
+                    CharSequence beforeCursorText = ic.getTextBeforeCursor(CHARS_TO_GET, 0);
+                    CharSequence cursorText = beforeCursorText + "" + ic.getTextAfterCursor(CHARS_TO_GET, 0);
+                    int offset = cursorPos - beforeCursorText.length();
+                    ReplacerService.log("cursor pos: " + cursorPos + "; offset: " + offset);
+                    ReplacerService.log("cursorText: " + cursorText);
+
+                    // Use detector
+                    ReplaceValues replValues = ICHelper.getReplaceValues(cursorText.toString(),
+                            cursorPos == 0 ? 0 : (cursorPos - offset),
+                            _currentLanguage,
+                            _appSettings);
+
+                    int moveCorrection = cursorPos - beforeCursorText.length() + replValues.WordWithBoundaries.Begin;
+                    ICHelper.PerformReplace(ic,
+                            cursorPos,
+                            moveCorrection,
+                            replValues.WordWithBoundaries.Word,
+                            replValues.NewWord);
+
+                    _replacerService.addToTempDictionary(replValues.NewWord, replValues.WordWithBoundaries.Word);
+                }
+
+                _lastActionType = ActionType.ManualChange;
+
+                notify(_currentLanguage, ActionType.ManualChange);
+
+                ReplacerService.log("------");
+
+                return true;
+            } // if Ctrl+Q
+
+        } catch (Exception ex) {
+            ReplacerService.log(ex.toString());
+        }
+
+
+
         if(keyCode == KeyEvent.KEYCODE_SHIFT_RIGHT || event.getScanCode() == 110){
             int meta = KeyEvent.META_CTRL_ON | KeyEvent.META_CTRL_LEFT_ON;
             if(ic!=null)ic.sendKeyEvent(new KeyEvent(
                     now, now, KeyEvent.ACTION_DOWN, KeyEvent.KEYCODE_CTRL_LEFT, 0, meta));
             ctrlPressed = true;
-            //show hide display keyboar
+            //show hide display keyboard
             if(shiftPressed && keyboardView.isShown()) {
                 keyboardView.setVisibility(View.GONE);
                 updateShiftKeyState(getCurrentInputEditorInfo());
@@ -506,6 +668,7 @@ public class KeyoneIME extends InputMethodService implements KeyboardView.OnKeyb
         } else if (event.getScanCode() == 100 && event.getRepeatCount() >= 1 && navigationSymbol){
             return true;
         }
+
 
         //навигационные клавиши
         if(navigationSymbol &&
@@ -597,7 +760,11 @@ public class KeyoneIME extends InputMethodService implements KeyboardView.OnKeyb
             }
             if(code != code_double_press && code_double_press != 0){
                 is_double_press = true;
-                if(ic!=null)ic.deleteSurroundingText(1,0);
+                if(ic!=null) {
+                    ic.deleteSurroundingText(1,0);
+                    // TLT: Mark correction:
+                    ic.commitCorrection(new CorrectionInfo(ICHelper.getCursorPos(ic), " ", " "));
+                }
                 code = code_double_press;
             }
         }else if(prev_key_press_btn_r1 == event.getScanCode() && event.getRepeatCount() == 1){
@@ -762,6 +929,104 @@ public class KeyoneIME extends InputMethodService implements KeyboardView.OnKeyb
             if(ic!=null && navigationKeyCode != 0) ic.sendKeyEvent(new KeyEvent(   KeyEvent.ACTION_UP, navigationKeyCode));
             return true;
         }
+
+
+
+        // TLT Autocorrect:
+        try {
+            if (!_lastActionType.isManual()
+                    && _appSettings.isAutoCorrect
+                    && keyCode != KeyEvent.KEYCODE_DEL
+                    && keyCode != KeyEvent.KEYCODE_SHIFT_LEFT
+                    && keyCode != KeyEvent.KEYCODE_SHIFT_RIGHT
+                    && keyCode != KeyEvent.KEYCODE_ALT_LEFT
+                    && keyCode != KeyEvent.KEYCODE_SHIFT_RIGHT
+                    && keyCode != KeyEvent.KEYCODE_META_LEFT
+                    && keyCode != KeyEvent.KEYCODE_META_RIGHT) {
+
+                boolean isReplaceable = ICHelper.isReplaceableInput(this.getCurrentInputEditorInfo().inputType);
+                boolean isBlockedByUser = _appSettings.autocorrectDirection.isEng() && _currentLanguage.isRus()
+                        || _appSettings.autocorrectDirection.isRus() && _currentLanguage.isEng();
+
+
+                CharSequence LastEnteredChars = ic.getTextBeforeCursor(1, 0);
+                if (LastEnteredChars != null && LastEnteredChars.length() == 1) { // There is a char entered
+                    ReplacerService.log("---Autocorrect:---");
+                    Character lastChar = LastEnteredChars.charAt(0);
+
+                    boolean isWordLetter = LanguageDetector.isWordLetter(lastChar, _currentLanguage);
+                    ReplacerService.log("Letter: '" + lastChar + "'; is word: " + isWordLetter);
+
+                    if (isReplaceable && !isBlockedByUser) {
+                        if (!isWordLetter) {
+                            int cursorPos = ICHelper.getCursorPos(ic);
+                            CharSequence beforeCursorText = ic.getTextBeforeCursor(CHARS_TO_GET, 0);
+                            int offset = cursorPos - beforeCursorText.length();
+
+
+                            // Use detector
+                            ReplaceValues replValues = ICHelper.getReplaceValues(beforeCursorText.toString(),
+                                    cursorPos == 0 ? 0 : (cursorPos - offset),
+                                    _currentLanguage,
+                                    _appSettings);
+
+                            if (_lastAutoReplaced != replValues.WordWithBoundaries.Begin) {
+                                _lastAutoReplaced = replValues.WordWithBoundaries.Begin;
+                                Language targetLang = LanguageDetector.getTargetLanguage(replValues.WordWithBoundaries.Word,
+                                        _appSettings.inputMethod,
+                                        _wordsListRu,
+                                        _wordsListEn,
+                                        _appSettings.userDict,
+                                        _appSettings.corrections);
+
+                                Language textEnteredLang = LayoutConverter.getTextLanguage(replValues.WordWithBoundaries.Word, _appSettings.inputMethod);
+
+                                if (targetLang == textEnteredLang || targetLang == Language.Unknown) {
+                                    ReplacerService.log("Same lang: " + targetLang);
+                                    // Input language == keyboard language
+                                    // Check for doubled capital
+                                    if (LayoutConverter.isNeedDoubleCapitalCorrection(replValues.WordWithBoundaries.Word)) {
+                                        int moveCorrection = cursorPos - beforeCursorText.length() + replValues.WordWithBoundaries.Begin;
+                                        ICHelper.PerformReplace(ic,
+                                                cursorPos,
+                                                moveCorrection,
+                                                replValues.WordWithBoundaries.Word,
+                                                LayoutConverter.getTextWithoutDoubledCapital(replValues.WordWithBoundaries.Word));
+                                    } else {
+                                        // Do nothing
+                                    }
+                                } else {
+                                    // Need to change layout
+                                    ReplacerService.log("Change lang: " + textEnteredLang + " => " + targetLang);
+                                    int moveCorrection = cursorPos - beforeCursorText.length() + replValues.WordWithBoundaries.Begin;
+                                    ICHelper.PerformReplace(ic,
+                                            cursorPos,
+                                            moveCorrection,
+                                            replValues.WordWithBoundaries.Word,
+                                            LayoutConverter.getTextWithoutDoubledCapital(replValues.NewWord));
+
+                                    ChangeLanguage(targetLang);
+
+                                    notify(_currentLanguage, ActionType.AutoChange);
+                                }
+                            } else {
+                                // Already corrected
+                                ReplacerService.log("Already corrected: " + _lastAutoReplaced);
+                            }
+                        } else {
+                            // if word letter
+                            _lastAutoReplaced = -1;
+                        }
+                    }
+                    ReplacerService.log("------");
+                }
+            } // Autocorrect
+        } catch (Exception ex) {
+            ReplacerService.log(ex.toString());
+        }
+
+
+
 
         if(keyCode == KeyEvent.KEYCODE_ENTER ||keyCode == KeyEvent.KEYCODE_SPACE || keyCode == KeyEvent.KEYCODE_DEL) return true;
 
@@ -1284,10 +1549,28 @@ public class KeyoneIME extends InputMethodService implements KeyboardView.OnKeyb
         }
         return result;
     }
-
     private void UpdateNotify() {
+        UpdateNotify(false);
+    }
+
+    private void UpdateNotify(boolean forceUpdate) {
         //notificationManager.cancelAll();
         Log.d(TAG, "UpdateNotify shiftPressFirstButtonBig="+shiftPressFirstButtonBig+" shiftPressAllButtonBig="+shiftPressAllButtonBig+" altPressAllButtonBig="+altPressAllButtonBig+" altPressFirstButtonBig="+altPressFirstButtonBig);
+
+        // Check if anything has changed
+        if (forceUpdate || notificationPropsHaveChanged(_prevNotificationprops)) {
+            // Update state and continue
+            _prevNotificationprops = getNotificationProps();
+        } else {
+            // no need to update notification, exit
+            return;
+        }
+
+
+        ReplacerService.log("UpdateNotify");
+
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(getApplicationContext());
+
         if(navigationSymbol){
             if(!fnSymbol)
             {
@@ -1420,43 +1703,110 @@ public class KeyoneIME extends InputMethodService implements KeyboardView.OnKeyb
             keyboardView.setLetterKB();
         }
 
+        // TLT action buttons
+        NotificationCompat.Action actionSoundSwitch = LanguageNotificationReceiver
+                .createNotificationAction(this, LanguageNotificationReceiver.ACTION_MUTE_SWITCH);
+        NotificationCompat.Action actionManualSwitch = LanguageNotificationReceiver
+                .createNotificationAction(this, LanguageNotificationReceiver.ACTION_MANUAL_SWITCH);
+        NotificationCompat.Action actionAutocorrectSwitch = LanguageNotificationReceiver
+                .createNotificationAction(this, LanguageNotificationReceiver.ACTION_AUTOCORRECT_SWITCH);
+        PendingIntent actionIntent = PendingIntent.getActivity(this, 0, new Intent(this, MainActivity.class), PendingIntent.FLAG_UPDATE_CURRENT);
+        String subText = null;
+        String contentText = null;
+
+        // If update is available
+        if (_appSettings != null
+                && _appSettings.checkForUpdates.isOn()
+                && _appSettings.isUpdateAvailable()
+        ) {
+            subText = getString(R.string.notification_text_update_available);
+            contentText = getString(R.string.notification_text_update_available_desc);
+            actionIntent = PendingIntent.getActivity(
+                    getApplicationContext(),
+                    0,
+                    new Intent(Intent.ACTION_VIEW, Uri.parse(_appSettings.updateLink)),
+                    PendingIntent.FLAG_UPDATE_CURRENT);
+        }
+
+        builder.setContentIntent(actionIntent)
+                .addAction(actionSoundSwitch)
+                .addAction(actionManualSwitch)
+                .addAction(actionAutocorrectSwitch)
+                .setSubText(subText)
+                .setContentText(contentText)
+
+                .setVisibility(NotificationCompat.VISIBILITY_SECRET)
+                .setPriority(Notification.PRIORITY_DEFAULT)
+                .setShowWhen(false)
+                .setOnlyAlertOnce(true)
+                .setOngoing(true);
+
         notificationManager.notify(1, builder.build());
 
     }
 
-    private void ChangeLanguage() {
-        langNum++;
-        if(langNum > langCount) langNum = 0;
-        if(langNum == 0){
+    private void ChangeLanguageCommon() {
+        if (langNum > langCount) langNum = 0;
+        if (langNum < 0) langNum = langCount;
+        if (langNum == 0) {
             isEnglishKb = true;
-        }else{
+            _currentLanguage = Language.getByInputMethod(Language.En, _appSettings.inputMethod);
+        } else {
             isEnglishKb = false;
+
+            if (langNum == 1) {
+                _currentLanguage = Language.getByInputMethod(Language.Ru, _appSettings.inputMethod);
+            } else {
+                _currentLanguage = Language.getByInputMethod(Language.Ukr, _appSettings.inputMethod);
+            }
         }
         LoadLayout(langArray[langNum]);
-        if(show_toast) {
+        if (show_toast) {
             toast = Toast.makeText(getApplicationContext(), langStr, Toast.LENGTH_SHORT);
             toast.show();
         }
         UpdateNotify();
+        //notify(_currentLanguage, ActionType.AltEnter);
+        ReplacerService.log("Change _currentLanguage: " + _currentLanguage);
 
         // Save selected language
         mSettings.edit().putInt(APP_PREFERENCES_CURR_LANG, langNum).commit();
     }
 
+    private void ChangeLanguage(Language newLang) {
+        switch (newLang) {
+            case Ru:
+            case RuFull:
+            case RuTrans:
+            case RuQwertz:
+            case RuFxtecPro1: {
+                langNum = 1; // Russian is 1?
+                break;
+            }
+            case En:
+            case EnFull:
+            case EnTrans:
+            case EnQwertz:
+            case EnFxtecPro1: {
+                langNum = 0; // English is always 0
+                break;
+            }
+            default: {
+                // No change
+                break;
+            }
+        }
+        ChangeLanguageCommon();
+    }
+
+    private void ChangeLanguage() {
+        langNum++;
+        ChangeLanguageCommon();
+    }
+
     private void ChangeLanguageBack() {
         langNum--;
-        if(langNum < 0) langNum = langCount;
-        if(langNum == 0){
-            isEnglishKb = true;
-        }else{
-            isEnglishKb = false;
-        }
-        LoadLayout(langArray[langNum]);
-        if(show_toast) {
-            toast = Toast.makeText(getApplicationContext(), langStr, Toast.LENGTH_SHORT);
-            toast.show();
-        }
-        UpdateNotify();
+        ChangeLanguageCommon();
     }
 
     private boolean isAlphabet(int code) {
@@ -1496,6 +1846,98 @@ public class KeyoneIME extends InputMethodService implements KeyboardView.OnKeyb
         }
     }
 
+    private void notify(Language lang, ActionType actionType) {
+        if (isNotificationsEnabled()) {
+            playSound(lang, actionType);
+            vibrate(lang, actionType);
+        }
+    }
+
+    public boolean isNotificationsEnabled() {
+        return _appSettings.whenEnableNotifications <= Calendar.getInstance().getTimeInMillis();
+    }
+
+    private void playSound(Language lang, ActionType actionType) {
+        switch (lang) {
+            case Ru:
+            case RuTrans:
+            case RuFull:
+            case RuQwertz:
+            case RuFxtecPro1: {
+                if (actionType == ActionType.AltEnterReplace) {
+                    // Play only if no Input sound
+                    if (_appSettings.soundInputRus == SoundPattern.None) {
+                        SoundManager.play(this, _appSettings.soundCorrectRus);
+                    }
+                } else if (actionType == ActionType.AltEnter || actionType == ActionType.CtrlSpace) {
+                    SoundManager.play(this, _appSettings.soundInputRus);
+                } else {
+                    SoundManager.play(this, _appSettings.soundCorrectRus);
+                }
+                break;
+            }
+            case En:
+            case EnTrans:
+            case EnFull:
+            case EnQwertz:
+            case EnFxtecPro1: {
+                if (actionType == ActionType.AltEnterReplace) {
+                    // Play only if no Input sound
+                    if (_appSettings.soundInputRus == SoundPattern.None) {
+                        SoundManager.play(this, _appSettings.soundCorrectEng);
+                    }
+                } else if (actionType == ActionType.AltEnter || actionType == ActionType.CtrlSpace) {
+                    SoundManager.play(this, _appSettings.soundInputEng);
+                } else {
+                    SoundManager.play(this, _appSettings.soundCorrectEng);
+                }
+                break;
+            }
+            default: {
+                break;
+            }
+        }
+    }
+
+    private void vibrate(Language lang, ActionType actionType) {
+        switch (lang) {
+            case Ru:
+            case RuTrans:
+            case RuFull:
+            case RuQwertz:
+            case RuFxtecPro1: {
+                if (actionType == ActionType.AltEnterReplace || actionType == ActionType.CtrlSpace) {
+                    // Vibrate only if no Input vibration
+                    if (_appSettings.vibrationPatternRus == VibrationPattern.None) {
+                        _vibrationManager.vibrate(_appSettings.vibrationPatternRus);
+                    }
+                } else {
+                    _vibrationManager.vibrate(_appSettings.vibrationPatternRus);
+                }
+                break;
+            }
+            case En:
+            case EnTrans:
+            case EnFull:
+            case EnQwertz:
+            case EnFxtecPro1: {
+                if (actionType == ActionType.AltEnterReplace || actionType == ActionType.CtrlSpace) {
+                    // Vibrate only if no Input vibration
+                    if (_appSettings.vibrationPatternRus == VibrationPattern.None) {
+                        _vibrationManager.vibrate(_appSettings.vibrationPatternEng);
+                    }
+                } else {
+                    _vibrationManager.vibrate(_appSettings.vibrationPatternEng);
+                }
+                break;
+            }
+            default: {
+                break;
+            }
+        }
+    }
+
+
     @Override public View onCreateCandidatesView() {
         mCandidateView = new CandidateView(this);
         mCandidateView.setService(this);
@@ -1510,5 +1952,38 @@ public class KeyoneIME extends InputMethodService implements KeyboardView.OnKeyb
     @Override
     public void onGetSentenceSuggestions(SentenceSuggestionsInfo[] results) {
         Log.d(TAG, "onGetSentenceSuggestions");
+    }
+
+
+    public static File createAppFolder() {
+        try {
+            File f = new File(Environment.getExternalStorageDirectory(), "TextLayoutTools");
+            if (!f.exists()) {
+                f.mkdirs();
+            }
+            return f;
+        } catch (Exception ex) {
+            Log.d(TAG, "Ex createAppFolder: " + ex.getMessage());
+        }
+        return null;
+    }
+
+    @Override
+    public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
+        if (getString(R.string.setting_is_auto_correct).equals(key)
+                || getString(R.string.setting_when_enable_notifications).equals(key)
+                || getString(R.string.setting_shortcut_enabled_key).equals(key)
+                || getString(R.string.setting_application_updates_available_ver).equals(key)
+                || getString(R.string.setting_application_updates_link).equals(key)
+        ) {
+            ReplacerService.log("Setting changed: " + key);
+            UpdateNotify();
+        }
+
+        // Updates settings
+        if (getString(R.string.setting_application_updates_check).equals(key)
+        ) {
+            UpdateNotify(true);
+        }
     }
 }

@@ -1,27 +1,51 @@
-com/sateda/keyonekb/KeyoneIME.java
- com.sateda.keyonekb.KeyoneIME
-com/sateda/keyonekb/BuildConfig.java
- com.sateda.keyonekb.BuildConfig
-com/sateda/keyonekb/IconsHelper.java
- com.sateda.keyonekb.IconsHelper
-com/sateda/keyonekb/KeyboardTestActivity.java
- com.sateda.keyonekb.KeyboardTestActivity
- com.sateda.keyonekb.KeyboardTestActivity$1
- com.sateda.keyonekb.KeyboardTestActivity$2
-com/sateda/keyonekb/CandidateView.java
- com.sateda.keyonekb.CandidateView
- com.sateda.keyonekb.CandidateView$1
-com/sateda/keyonekb/MoreKeysKeyboardView.java
- com.sateda.keyonekb.MoreKeysKeyboardView
+by/mkr/blackberry/textlayouttools/UserTempDictionary.java
+ by.mkr.blackberry.textlayouttools.UserTempDictionary
+by/mkr/blackberry/textlayouttools/ActionType.java
+ by.mkr.blackberry.textlayouttools.ActionType
+ by.mkr.blackberry.textlayouttools.ActionType$1
 com/sateda/keyonekb/MainActivity.java
  com.sateda.keyonekb.MainActivity
  com.sateda.keyonekb.MainActivity$1
  com.sateda.keyonekb.MainActivity$2
-com/sateda/keyonekb/OverKeyboardPopupWindow.java
- com.sateda.keyonekb.OverKeyboardPopupWindow
- com.sateda.keyonekb.OverKeyboardPopupWindow$OnKeyboardHideListener
-com/sateda/keyonekb/SatedaKeyboard.java
- com.sateda.keyonekb.SatedaKeyboard
+ com.sateda.keyonekb.MainActivity$3
+by/mkr/blackberry/textlayouttools/AppCompatPreferenceActivity.java
+ by.mkr.blackberry.textlayouttools.AppCompatPreferenceActivity
+com/sateda/keyonekb/BuildConfig.java
+ com.sateda.keyonekb.BuildConfig
+by/mkr/blackberry/textlayouttools/CorrectionAdapter.java
+ by.mkr.blackberry.textlayouttools.CorrectionAdapter
+ by.mkr.blackberry.textlayouttools.CorrectionAdapter$1
+ by.mkr.blackberry.textlayouttools.CorrectionAdapter$2
+ by.mkr.blackberry.textlayouttools.CorrectionAdapter$CorrectionsListener
+ by.mkr.blackberry.textlayouttools.CorrectionAdapter$ItemEditDialogListener
+ by.mkr.blackberry.textlayouttools.CorrectionAdapter$MyViewHolder
+ by.mkr.blackberry.textlayouttools.CorrectionAdapter$MyViewHolder$1
+ by.mkr.blackberry.textlayouttools.CorrectionAdapter$MyViewHolder$1$1
+ by.mkr.blackberry.textlayouttools.CorrectionAdapter$MyViewHolder$2
+ by.mkr.blackberry.textlayouttools.CorrectionAdapter$MyViewHolder$2$1
+ by.mkr.blackberry.textlayouttools.CorrectionItem
+ by.mkr.blackberry.textlayouttools.CorrectionViewItem
+com/sateda/keyonekb/KeyboardTestActivity.java
+ com.sateda.keyonekb.KeyboardTestActivity
+ com.sateda.keyonekb.KeyboardTestActivity$1
+ com.sateda.keyonekb.KeyboardTestActivity$2
+by/mkr/blackberry/textlayouttools/WordsList.java
+ by.mkr.blackberry.textlayouttools.WordsList
+ by.mkr.blackberry.textlayouttools.WordsList$1
+by/mkr/blackberry/textlayouttools/ReplaceValues.java
+ by.mkr.blackberry.textlayouttools.ReplaceValues
+by/mkr/blackberry/textlayouttools/WordWithBoundaries.java
+ by.mkr.blackberry.textlayouttools.WordWithBoundaries
+by/mkr/blackberry/textlayouttools/HttpHelper.java
+ by.mkr.blackberry.textlayouttools.HttpCallback
+ by.mkr.blackberry.textlayouttools.HttpHelper
+ by.mkr.blackberry.textlayouttools.HttpHelper$1
+ by.mkr.blackberry.textlayouttools.HttpHelper$1$1
+ by.mkr.blackberry.textlayouttools.HttpHelper$2
+by/mkr/blackberry/textlayouttools/SoundManager.java
+ by.mkr.blackberry.textlayouttools.SoundManager
+ by.mkr.blackberry.textlayouttools.SoundManager$1
+ by.mkr.blackberry.textlayouttools.SoundManager$2
 com/sateda/keyonekb/SettingsActivity.java
  com.sateda.keyonekb.SettingsActivity
  com.sateda.keyonekb.SettingsActivity$1
@@ -32,7 +56,87 @@ com/sateda/keyonekb/SettingsActivity.java
  com.sateda.keyonekb.SettingsActivity$6
  com.sateda.keyonekb.SettingsActivity$7
  com.sateda.keyonekb.SettingsActivity$8
+by/mkr/blackberry/textlayouttools/LanguageDetector.java
+ by.mkr.blackberry.textlayouttools.LanguageDetector
+ by.mkr.blackberry.textlayouttools.LanguageDetector$1
+by/mkr/blackberry/textlayouttools/TextSelection.java
+ by.mkr.blackberry.textlayouttools.TextSelection
+com/sateda/keyonekb/IconsHelper.java
+ com.sateda.keyonekb.IconsHelper
+com/sateda/keyonekb/MoreKeysKeyboardView.java
+ com.sateda.keyonekb.MoreKeysKeyboardView
+com/sateda/keyonekb/NotificationProperties.java
+ com.sateda.keyonekb.NotificationProperties
+com/sateda/keyonekb/OverKeyboardPopupWindow.java
+ com.sateda.keyonekb.OverKeyboardPopupWindow
+ com.sateda.keyonekb.OverKeyboardPopupWindow$OnKeyboardHideListener
+by/mkr/blackberry/textlayouttools/VibrationManager.java
+ by.mkr.blackberry.textlayouttools.VibrationManager
+ by.mkr.blackberry.textlayouttools.VibrationManager$1
+com/sateda/keyonekb/SatedaKeyboard.java
+ com.sateda.keyonekb.SatedaKeyboard
+by/mkr/blackberry/textlayouttools/SoundPattern.java
+ by.mkr.blackberry.textlayouttools.SoundPattern
+by/mkr/blackberry/textlayouttools/NetworkState.java
+ by.mkr.blackberry.textlayouttools.NetworkState
+by/mkr/blackberry/textlayouttools/LayoutConverter.java
+ by.mkr.blackberry.textlayouttools.InputMethod
+ by.mkr.blackberry.textlayouttools.LayoutConverter
+ by.mkr.blackberry.textlayouttools.LayoutConverter$1
+ by.mkr.blackberry.textlayouttools.LayoutConverter$10
+ by.mkr.blackberry.textlayouttools.LayoutConverter$11
+ by.mkr.blackberry.textlayouttools.LayoutConverter$2
+ by.mkr.blackberry.textlayouttools.LayoutConverter$3
+ by.mkr.blackberry.textlayouttools.LayoutConverter$4
+ by.mkr.blackberry.textlayouttools.LayoutConverter$5
+ by.mkr.blackberry.textlayouttools.LayoutConverter$6
+ by.mkr.blackberry.textlayouttools.LayoutConverter$7
+ by.mkr.blackberry.textlayouttools.LayoutConverter$8
+ by.mkr.blackberry.textlayouttools.LayoutConverter$9
+by/mkr/blackberry/textlayouttools/Language.java
+ by.mkr.blackberry.textlayouttools.Language
+ by.mkr.blackberry.textlayouttools.Language$1
+by/mkr/blackberry/textlayouttools/VibrationPattern.java
+ by.mkr.blackberry.textlayouttools.VibrationPattern
+by/mkr/blackberry/textlayouttools/LanguageNotificationReceiver.java
+ by.mkr.blackberry.textlayouttools.LanguageNotificationReceiver
+by/mkr/blackberry/textlayouttools/AddToDictionaryActivity.java
+ by.mkr.blackberry.textlayouttools.AddToDictionaryActivity
+by/mkr/blackberry/textlayouttools/CheckVersionReceiver.java
+ by.mkr.blackberry.textlayouttools.CheckVersionReceiver
+ by.mkr.blackberry.textlayouttools.CheckVersionReceiver$1
+com/sateda/keyonekb/KeyoneIME.java
+ com.sateda.keyonekb.KeyoneIME
+ com.sateda.keyonekb.KeyoneIME$1
+com/sateda/keyonekb/CandidateView.java
+ com.sateda.keyonekb.CandidateView
+ com.sateda.keyonekb.CandidateView$1
+com/sateda/keyonekb/ICHelper.java
+ com.sateda.keyonekb.ICHelper
+by/mkr/blackberry/textlayouttools/SettingsActivity.java
+ by.mkr.blackberry.textlayouttools.SettingsActivity
+ by.mkr.blackberry.textlayouttools.SettingsActivity$1
+ by.mkr.blackberry.textlayouttools.SettingsActivity$ApplicationPreferenceFragment
+ by.mkr.blackberry.textlayouttools.SettingsActivity$AutocorrectPreferenceFragment
+ by.mkr.blackberry.textlayouttools.SettingsActivity$BackupPreferenceFragment
+ by.mkr.blackberry.textlayouttools.SettingsActivity$BackupPreferenceFragment$1
+ by.mkr.blackberry.textlayouttools.SettingsActivity$BackupPreferenceFragment$2
+ by.mkr.blackberry.textlayouttools.SettingsActivity$ExperimentalPreferenceFragment
+ by.mkr.blackberry.textlayouttools.SettingsActivity$ExperimentalPreferenceFragment$1
+ by.mkr.blackberry.textlayouttools.SettingsActivity$NotificationPreferenceFragment
+ by.mkr.blackberry.textlayouttools.SettingsActivity$ShortcutPreferenceFragment
+by/mkr/blackberry/textlayouttools/ReplacerService.java
+ by.mkr.blackberry.textlayouttools.ReplacerService
+ by.mkr.blackberry.textlayouttools.ReplacerService$1
 com/sateda/keyonekb/SatedaKeyboardView.java
  com.sateda.keyonekb.SatedaKeyboardView
  com.sateda.keyonekb.SatedaKeyboardView$1
  com.sateda.keyonekb.SatedaKeyboardView$2
+by/mkr/blackberry/textlayouttools/AppSettings.java
+ by.mkr.blackberry.textlayouttools.AppSettings
+by/mkr/blackberry/textlayouttools/CorrectionsActivity.java
+ by.mkr.blackberry.textlayouttools.CorrectionsActivity
+ by.mkr.blackberry.textlayouttools.CorrectionsActivity$1
+ by.mkr.blackberry.textlayouttools.CorrectionsActivity$2
+by/mkr/blackberry/textlayouttools/ReplacerActivity.java
+ by.mkr.blackberry.textlayouttools.ReplacerActivity
