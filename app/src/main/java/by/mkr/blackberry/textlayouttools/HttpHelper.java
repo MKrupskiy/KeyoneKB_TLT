@@ -1,10 +1,7 @@
 package by.mkr.blackberry.textlayouttools;
 
 import android.app.Activity;
-import android.text.TextUtils;
-
 import com.sateda.keyonekb.KeyoneIME;
-
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileOutputStream;
@@ -13,7 +10,6 @@ import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.Date;
 
 
 interface HttpCallback {
@@ -21,7 +17,7 @@ interface HttpCallback {
 }
 
 public class HttpHelper {
-    public static final String NEW_VERSION_CHECK_URL = "https://github.com/MKrupskiy/TextLayoutTools/blob/master/api/Latest.ver?raw=true";
+    public static final String NEW_VERSION_CHECK_URL = "https://github.com/MKrupskiy/KeyoneKB_TLT/blob/development/api/Latest.ver?raw=true";
     // File example:
     // 1.16
     // https://link.to/the.update

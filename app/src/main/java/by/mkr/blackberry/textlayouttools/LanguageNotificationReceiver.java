@@ -1,23 +1,15 @@
 package by.mkr.blackberry.textlayouttools;
 
-import android.app.Notification;
-import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.graphics.Color;
 import android.preference.PreferenceManager;
 import android.support.v7.app.NotificationCompat;
-import android.util.Log;
 import android.widget.Toast;
-
 import com.sateda.keyonekb.R;
-
 import org.jetbrains.annotations.NotNull;
-
-import java.text.DateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
