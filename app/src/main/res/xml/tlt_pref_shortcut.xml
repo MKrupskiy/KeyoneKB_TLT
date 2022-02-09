@@ -1,0 +1,61 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="@string/pref_h2_input_type">
+        <ListPreference
+            android:defaultValue="Qwerty"
+            android:entries="@array/pref_input_method_titles"
+            android:entryValues="@array/pref_input_method_values"
+            android:key="@string/setting_input_method"
+            android:title="@string/pref_title_input_method" />
+
+        <Preference android:title="@string/pref_title_keyboard_input_settings" android:icon="@drawable/ic_open_in_new_24dp">
+            <intent android:action="android.settings.INPUT_METHOD_SUBTYPE_SETTINGS" />
+        </Preference>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/pref_h2_shortcut">
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="@string/setting_shortcut_enabled_key"
+            android:summary="@string/pref_description_shortcut_enabled"
+            android:title="@string/pref_title_shortcut_enabled" />
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="@string/setting_is_replace_alt_enter"
+            android:dependency="@string/setting_shortcut_enabled_key"
+            android:summary="@string/pref_description_is_replace_alt_enter"
+            android:title="@string/pref_title_is_replace_alt_enter" />
+        <ListPreference
+            android:defaultValue="129"
+            android:entries="@array/pref_control_key_titles"
+            android:entryValues="@array/pref_control_key_values"
+            android:key="@string/setting_control_key"
+            android:negativeButtonText="@null"
+            android:positiveButtonText="@null"
+            android:dependency="@string/setting_shortcut_enabled_key"
+            android:title="@string/pref_title_control_key" />
+        <ListPreference
+            android:defaultValue="45"
+            android:entries="@array/pref_shortcut_titles"
+            android:entryValues="@array/pref_shortcut_values"
+            android:key="@string/setting_shortcut_key"
+            android:negativeButtonText="@null"
+            android:positiveButtonText="@null"
+            android:dependency="@string/setting_shortcut_enabled_key"
+            android:title="@string/pref_title_shortcut" />
+        <Preference android:title="@string/pref_title_system_accessibility_settings"
+            android:icon="@drawable/ic_open_in_new_24dp"
+            android:dependency="@string/setting_shortcut_enabled_key">
+            <intent android:action="android.settings.ACCESSIBILITY_SETTINGS" />
+        </Preference>
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/pref_h2_text_selection">
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="@string/setting_select_replaced"
+            android:summary="@string/pref_description_select_replaced"
+            android:dependency="@string/setting_shortcut_enabled_key"
+            android:title="@string/pref_title_select_replaced" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

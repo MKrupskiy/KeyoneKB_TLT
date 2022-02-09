@@ -1,0 +1,34 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="@string/pref_h2_ctrl_emulation">
+        <SwitchPreference
+            android:defaultValue="false"
+
+            android:key="@string/setting_key2emulation_enabled"
+            android:summary="@string/pref_description_key2emulation_enabled"
+            android:title="@string/pref_title_key2emulation_enabled" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/pref_h2_logging">
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="@string/setting_is_show_info"
+            android:summary="@string/pref_description_is_show_info"
+            android:title="@string/pref_title_is_show_info" />
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="@string/setting_is_log_to_sd"
+            android:summary="@string/pref_description_is_log_to_sd"
+            android:title="@string/pref_title_is_log_to_sd" />
+
+        <Preference
+            android:icon="@drawable/ic_open_in_new_24dp"
+            android:title="@string/setting_open_app_settings">
+            <intent
+                android:action="android.settings.APPLICATION_DETAILS_SETTINGS"
+                android:data="package:com.sateda.keyonekb" />
+        </Preference>
+    </PreferenceCategory>
+
+</PreferenceScreen>

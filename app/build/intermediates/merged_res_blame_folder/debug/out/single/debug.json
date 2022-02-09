@@ -1,326 +1,458 @@
 [
     {
-        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_flag_gb_col.xml.flat",
-        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\src\\main\\res\\drawable\\ic_flag_gb_col.xml"
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_right_arrow_white.png.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_right_arrow_white.png"
     },
     {
-        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_launcher_background.xml.flat",
-        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_g_translate_24dp.xml.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\drawable\\ic_g_translate_24dp.xml"
     },
     {
-        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_left_arrow_white.png.flat",
-        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_left_arrow_white.png"
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_kb_nav_fn.png.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\mipmap-mdpi\\ic_kb_nav_fn.png"
     },
     {
-        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\raw_sound_stop.wav.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\raw\\sound_stop.wav"
     },
     {
-        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\build\\intermediates\\res\\merged\\debug\\xml_russian_hw.xml.flat",
-        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\src\\main\\res\\xml\\russian_hw.xml"
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_eng_small.png.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\mipmap-mdpi\\ic_eng_small.png"
     },
     {
-        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_kb_sym.png.flat",
-        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\src\\main\\res\\mipmap-hdpi\\ic_kb_sym.png"
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\xml_tlt_pref_autocorrect.xml.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\xml\\tlt_pref_autocorrect.xml"
     },
     {
-        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\build\\intermediates\\res\\merged\\debug\\xml_method.xml.flat",
-        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\src\\main\\res\\xml\\method.xml"
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_kb_nav.png.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\mipmap-hdpi\\ic_kb_nav.png"
     },
     {
-        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_ukr_small.png.flat",
-        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\src\\main\\res\\mipmap-mdpi\\ic_ukr_small.png"
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\drawable-v24\\ic_launcher_foreground.xml"
     },
     {
-        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_eng_shift_first.png.flat",
-        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\src\\main\\res\\mipmap-hdpi\\ic_eng_shift_first.png"
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\build\\intermediates\\res\\merged\\debug\\xml_ukraine_hw.xml.flat",
-        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\src\\main\\res\\xml\\ukraine_hw.xml"
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\raw_sorceress_pissed4.mp3.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\raw\\sorceress_pissed4.mp3"
     },
     {
-        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_ukr_shift_all.png.flat",
-        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\src\\main\\res\\mipmap-mdpi\\ic_ukr_shift_all.png"
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_backspace_white_24dp.png.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\mipmap-hdpi\\ic_backspace_white_24dp.png"
     },
     {
-        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_rus_shift_all.png.flat",
-        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\src\\main\\res\\mipmap-hdpi\\ic_rus_shift_all.png"
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_backspace_white_24dp.png.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\mipmap-xhdpi\\ic_backspace_white_24dp.png"
     },
     {
-        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\build\\intermediates\\res\\merged\\debug\\drawable_pressed.xml.flat",
-        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\src\\main\\res\\drawable\\pressed.xml"
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_backspace_white_24dp.png.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_backspace_white_24dp.png"
     },
     {
-        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
-        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\src\\main\\res\\layout\\activity_main.xml"
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_keyboard_google_24dp.xml.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\drawable\\ic_keyboard_google_24dp.xml"
     },
     {
-        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_eng_small_touch.png.flat",
-        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\src\\main\\res\\mipmap-hdpi\\ic_eng_small_touch.png"
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_flag_ukraine_col.xml.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\drawable\\ic_flag_ukraine_col.xml"
     },
     {
-        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_kb_sym_one.png.flat",
-        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\src\\main\\res\\mipmap-mdpi\\ic_kb_sym_one.png"
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\raw_sound_reverse_ps.wav.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\raw\\sound_reverse_ps.wav"
     },
     {
-        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_ukr_shift_first.png.flat",
-        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\src\\main\\res\\mipmap-hdpi\\ic_ukr_shift_first.png"
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_rus_small.png.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\mipmap-hdpi\\ic_rus_small.png"
     },
     {
-        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\build\\intermediates\\res\\merged\\debug\\drawable_normal.xml.flat",
-        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\src\\main\\res\\drawable\\normal.xml"
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_keyboard_test.xml.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\layout\\activity_keyboard_test.xml"
     },
     {
-        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_rus_shift_first.png.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\mipmap-mdpi\\ic_rus_shift_first.png"
     },
     {
-        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_keyboard_return_white_24dp.png.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\mipmap-hdpi\\ic_keyboard_return_white_24dp.png"
     },
     {
-        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_kb_sym.png.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\mipmap-mdpi\\ic_kb_sym.png"
     },
     {
-        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_eng_small.png.flat",
-        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\src\\main\\res\\mipmap-mdpi\\ic_eng_small.png"
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\layout_tlt_activity_corrections.xml.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\layout\\tlt_activity_corrections.xml"
     },
     {
-        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_launcher_foreground.xml.flat",
-        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\src\\main\\res\\drawable-v24\\ic_launcher_foreground.xml"
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_kb_sym_one.png.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\mipmap-mdpi\\ic_kb_sym_one.png"
     },
     {
-        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_kb_nav_fn.png.flat",
-        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\src\\main\\res\\mipmap-mdpi\\ic_kb_nav_fn.png"
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_keyboard_return_white_24dp.png.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\mipmap-mdpi\\ic_keyboard_return_white_24dp.png"
     },
     {
-        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\build\\intermediates\\res\\merged\\debug\\layout_key_preview.xml.flat",
-        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\src\\main\\res\\layout\\key_preview.xml"
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_rus_shift_all_touch.png.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\mipmap-hdpi\\ic_rus_shift_all_touch.png"
     },
     {
-        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\raw_sound_click_xp.wav.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\raw\\sound_click_xp.wav"
     },
     {
-        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\build\\intermediates\\res\\merged\\debug\\xml_navigation.xml.flat",
-        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\src\\main\\res\\xml\\navigation.xml"
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_eng_shift_first_touch.png.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\mipmap-hdpi\\ic_eng_shift_first_touch.png"
     },
     {
-        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\build\\intermediates\\res\\merged\\debug\\xml_russian_translit_hw.xml.flat",
-        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\src\\main\\res\\xml\\russian_translit_hw.xml"
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_down_arrow_white.png.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_down_arrow_white.png"
     },
     {
-        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_rus_small.png.flat",
-        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\src\\main\\res\\mipmap-mdpi\\ic_rus_small.png"
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_settings.xml.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\layout\\activity_settings.xml"
     },
     {
-        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_kb_nav_fn.png.flat",
-        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\src\\main\\res\\mipmap-hdpi\\ic_kb_nav_fn.png"
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_ukr_shift_first.png.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\mipmap-mdpi\\ic_ukr_shift_first.png"
     },
     {
-        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_eng_shift_all.png.flat",
-        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\src\\main\\res\\mipmap-mdpi\\ic_eng_shift_all.png"
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_backup_24dp.xml.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\drawable\\ic_backup_24dp.xml"
     },
     {
-        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_rus_shift_first_touch.png.flat",
-        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\src\\main\\res\\mipmap-hdpi\\ic_rus_shift_first_touch.png"
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_ukr_shift_all.png.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\mipmap-mdpi\\ic_ukr_shift_all.png"
     },
     {
-        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_eng_shift_all_touch.png.flat",
-        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\src\\main\\res\\mipmap-hdpi\\ic_eng_shift_all_touch.png"
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_rus_small.png.flat",
-        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\src\\main\\res\\mipmap-hdpi\\ic_rus_small.png"
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_ukr_shift_first.png.flat",
-        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\src\\main\\res\\mipmap-mdpi\\ic_ukr_shift_first.png"
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\xml_tlt_pref_experimental.xml.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\xml\\tlt_pref_experimental.xml"
     },
     {
-        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_eng_shift_first_touch.png.flat",
-        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\src\\main\\res\\mipmap-hdpi\\ic_eng_shift_first_touch.png"
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_rus_shift_first.png.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\mipmap-hdpi\\ic_rus_shift_first.png"
     },
     {
-        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_ukr_small_touch.png.flat",
-        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\src\\main\\res\\mipmap-hdpi\\ic_ukr_small_touch.png"
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\xml_tlt_pref_headers.xml.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\xml\\tlt_pref_headers.xml"
     },
     {
-        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_kb_nav.png.flat",
-        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\src\\main\\res\\mipmap-hdpi\\ic_kb_nav.png"
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_eng_shift_all.png.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\mipmap-hdpi\\ic_eng_shift_all.png"
     },
     {
-        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\build\\intermediates\\res\\merged\\debug\\layout_keyboard_popup_layout.xml.flat",
-        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\src\\main\\res\\layout\\keyboard_popup_layout.xml"
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_flag_russia_col.xml.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\drawable\\ic_flag_russia_col.xml"
     },
     {
-        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_rus_shift_first.png.flat",
-        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\src\\main\\res\\mipmap-hdpi\\ic_rus_shift_first.png"
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\xml_russian_hw.xml.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\xml\\russian_hw.xml"
     },
     {
-        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\build\\intermediates\\res\\merged\\debug\\drawable_key_background.xml.flat",
-        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\src\\main\\res\\drawable\\key_background.xml"
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\xml_english_hw.xml.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\xml\\english_hw.xml"
     },
     {
-        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_rus_shift_all.png.flat",
-        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\src\\main\\res\\mipmap-mdpi\\ic_rus_shift_all.png"
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_ukr_small.png.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\mipmap-hdpi\\ic_ukr_small.png"
     },
     {
-        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_ukr_shift_all.png.flat",
-        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\src\\main\\res\\mipmap-hdpi\\ic_ukr_shift_all.png"
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\layout_keyboard_popup_layout.xml.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\layout\\keyboard_popup_layout.xml"
     },
     {
-        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\build\\intermediates\\res\\merged\\debug\\xml_symbol.xml.flat",
-        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\src\\main\\res\\xml\\symbol.xml"
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_eng_small.png.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\mipmap-hdpi\\ic_eng_small.png"
     },
     {
-        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\xml_ukraine_hw.xml.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\xml\\ukraine_hw.xml"
     },
     {
-        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\build\\intermediates\\res\\merged\\debug\\layout_keyboard.xml.flat",
-        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\src\\main\\res\\layout\\keyboard.xml"
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\layout_keyboard.xml.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\layout\\keyboard.xml"
     },
     {
-        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_backspace_white_24dp.png.flat",
-        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\src\\main\\res\\mipmap-mdpi\\ic_backspace_white_24dp.png"
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_keyboard_return_white_24dp.png.flat",
-        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_keyboard_return_white_24dp.png"
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_rus_shift_all.png.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\mipmap-hdpi\\ic_rus_shift_all.png"
     },
     {
-        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_up_arrow_white.png.flat",
-        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_up_arrow_white.png"
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_keyboard_return_white_24dp.png.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_keyboard_return_white_24dp.png"
     },
     {
-        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_eng_shift_first.png.flat",
-        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\src\\main\\res\\mipmap-mdpi\\ic_eng_shift_first.png"
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_rus_shift_all.png.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\mipmap-mdpi\\ic_rus_shift_all.png"
     },
     {
-        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_backspace_white_24dp.png.flat",
-        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\src\\main\\res\\mipmap-hdpi\\ic_backspace_white_24dp.png"
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_eng_shift_first.png.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\mipmap-hdpi\\ic_eng_shift_first.png"
     },
     {
-        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_backspace_white_24dp.png.flat",
-        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_backspace_white_24dp.png"
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\xml_tlt_pref_shortcut.xml.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\xml\\tlt_pref_shortcut.xml"
     },
     {
-        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_settings.xml.flat",
-        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\src\\main\\res\\layout\\activity_settings.xml"
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_backspace_white_24dp.png.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_backspace_white_24dp.png"
     },
     {
-        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_ukr_shift_first_touch.png.flat",
-        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\src\\main\\res\\mipmap-hdpi\\ic_ukr_shift_first_touch.png"
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\raw_sorceress_pissed2.mp3.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\raw\\sorceress_pissed2.mp3"
     },
     {
-        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_keyboard_return_white_24dp.png.flat",
-        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\src\\main\\res\\mipmap-hdpi\\ic_keyboard_return_white_24dp.png"
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\xml_tlt_pref_application.xml.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\xml\\tlt_pref_application.xml"
     },
     {
-        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_rus_small_touch.png.flat",
-        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\src\\main\\res\\mipmap-hdpi\\ic_rus_small_touch.png"
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\xml_method.xml.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\xml\\method.xml"
     },
     {
-        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_kb_sym_one.png.flat",
-        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\src\\main\\res\\mipmap-hdpi\\ic_kb_sym_one.png"
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\drawable_key_background.xml.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\drawable\\key_background.xml"
     },
     {
-        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_kb_sym.png.flat",
-        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\src\\main\\res\\mipmap-mdpi\\ic_kb_sym.png"
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\raw_sound_exclamation.wav.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\raw\\sound_exclamation.wav"
     },
     {
-        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_backspace_white_24dp.png.flat",
-        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\src\\main\\res\\mipmap-xhdpi\\ic_backspace_white_24dp.png"
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\xml_tlt_pref_backup.xml.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\xml\\tlt_pref_backup.xml"
     },
     {
-        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_eng_shift_all.png.flat",
-        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\src\\main\\res\\mipmap-hdpi\\ic_eng_shift_all.png"
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_notifications_active_24dp.xml.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\drawable\\ic_notifications_active_24dp.xml"
     },
     {
-        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_flag_russia_col.xml.flat",
-        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\src\\main\\res\\drawable\\ic_flag_russia_col.xml"
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_kb_nav.png.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\mipmap-mdpi\\ic_kb_nav.png"
     },
     {
-        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\raw_sound_switch_ps.wav.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\raw\\sound_switch_ps.wav"
     },
     {
-        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_kb_nav.png.flat",
-        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\src\\main\\res\\mipmap-mdpi\\ic_kb_nav.png"
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\layout_tlt_content_correction_item.xml.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\layout\\tlt_content_correction_item.xml"
     },
     {
-        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_rus_shift_first.png.flat",
-        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\src\\main\\res\\mipmap-mdpi\\ic_rus_shift_first.png"
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\drawable_normal.xml.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\drawable\\normal.xml"
     },
     {
-        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\build\\intermediates\\res\\merged\\debug\\xml_alt_hw.xml.flat",
-        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\src\\main\\res\\xml\\alt_hw.xml"
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_ukr_small.png.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\mipmap-mdpi\\ic_ukr_small.png"
     },
     {
-        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_keyboard_test.xml.flat",
-        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\src\\main\\res\\layout\\activity_keyboard_test.xml"
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\raw_sorceress_pissed1.mp3.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\raw\\sorceress_pissed1.mp3"
     },
     {
-        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\build\\intermediates\\res\\merged\\debug\\xml_english_hw.xml.flat",
-        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\src\\main\\res\\xml\\english_hw.xml"
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_kb_sym.png.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\mipmap-hdpi\\ic_kb_sym.png"
     },
     {
-        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_ukr_small_touch.png.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\mipmap-hdpi\\ic_ukr_small_touch.png"
     },
     {
-        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_backspace_white_24dp.png.flat",
-        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_backspace_white_24dp.png"
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
     },
     {
-        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_ukr_shift_all_touch.png.flat",
-        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\src\\main\\res\\mipmap-hdpi\\ic_ukr_shift_all_touch.png"
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_keyboard_return_white_24dp.png.flat",
-        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\src\\main\\res\\mipmap-xhdpi\\ic_keyboard_return_white_24dp.png"
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\xml_tlt_pref_notification.xml.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\xml\\tlt_pref_notification.xml"
     },
     {
-        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_keyboard_return_white_24dp.png.flat",
-        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\src\\main\\res\\mipmap-mdpi\\ic_keyboard_return_white_24dp.png"
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_ukr_shift_all.png.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\mipmap-hdpi\\ic_ukr_shift_all.png"
     },
     {
-        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\build\\intermediates\\res\\merged\\debug\\xml_space_empty.xml.flat",
-        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\src\\main\\res\\xml\\space_empty.xml"
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\drawable_pressed.xml.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\drawable\\pressed.xml"
     },
     {
-        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_right_arrow_white.png.flat",
-        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_right_arrow_white.png"
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_eng_shift_all_touch.png.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\mipmap-hdpi\\ic_eng_shift_all_touch.png"
     },
     {
-        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_flag_ukraine_col.xml.flat",
-        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\src\\main\\res\\drawable\\ic_flag_ukraine_col.xml"
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\xml_alt_hw.xml.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\xml\\alt_hw.xml"
     },
     {
-        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_rus_shift_all_touch.png.flat",
-        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\src\\main\\res\\mipmap-hdpi\\ic_rus_shift_all_touch.png"
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_eng_shift_all.png.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\mipmap-mdpi\\ic_eng_shift_all.png"
     },
     {
-        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_eng_small.png.flat",
-        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\src\\main\\res\\mipmap-hdpi\\ic_eng_small.png"
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\raw_sound_misprint_ps.wav.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\raw\\sound_misprint_ps.wav"
     },
     {
-        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_ukr_small.png.flat",
-        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\src\\main\\res\\mipmap-hdpi\\ic_ukr_small.png"
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\layout_tlt_content_correction_prompt.xml.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\layout\\tlt_content_correction_prompt.xml"
     },
     {
-        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_rus_shift_first_touch.png.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\mipmap-hdpi\\ic_rus_shift_first_touch.png"
     },
     {
-        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_down_arrow_white.png.flat",
-        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\KeyoneKB\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_down_arrow_white.png"
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\layout_key_preview.xml.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\layout\\key_preview.xml"
+    },
+    {
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_eng_small_touch.png.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\mipmap-hdpi\\ic_eng_small_touch.png"
+    },
+    {
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\raw_sorceress_what5.mp3.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\raw\\sorceress_what5.mp3"
+    },
+    {
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_ukr_shift_all_touch.png.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\mipmap-hdpi\\ic_ukr_shift_all_touch.png"
+    },
+    {
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_left_arrow_white.png.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_left_arrow_white.png"
+    },
+    {
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_settings_24dp.xml.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\drawable\\ic_settings_24dp.xml"
+    },
+    {
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_backspace_white_24dp.png.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\mipmap-mdpi\\ic_backspace_white_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\raw_sound_ru_ps.wav.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\raw\\sound_ru_ps.wav"
+    },
+    {
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\raw_sorceress_yes1.mp3.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\raw\\sorceress_yes1.mp3"
+    },
+    {
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\xml_navigation.xml.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\xml\\navigation.xml"
+    },
+    {
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_up_arrow_white.png.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_up_arrow_white.png"
+    },
+    {
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\raw_sound_en_ps.wav.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\raw\\sound_en_ps.wav"
+    },
+    {
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_sync_24dp.xml.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\drawable\\ic_sync_24dp.xml"
+    },
+    {
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\xml_russian_translit_hw.xml.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\xml\\russian_translit_hw.xml"
+    },
+    {
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_rus_small_touch.png.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\mipmap-hdpi\\ic_rus_small_touch.png"
+    },
+    {
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\raw_sorceress_pissed3.mp3.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\raw\\sorceress_pissed3.mp3"
+    },
+    {
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_open_in_new_24dp.xml.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\drawable\\ic_open_in_new_24dp.xml"
+    },
+    {
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\raw_sorceress_yes3.mp3.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\raw\\sorceress_yes3.mp3"
+    },
+    {
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_keyboard_return_white_24dp.png.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\mipmap-xhdpi\\ic_keyboard_return_white_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_extension_24dp.xml.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\drawable\\ic_extension_24dp.xml"
+    },
+    {
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_eng_shift_first.png.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\mipmap-mdpi\\ic_eng_shift_first.png"
+    },
+    {
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_kb_nav_fn.png.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\mipmap-hdpi\\ic_kb_nav_fn.png"
+    },
+    {
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_flag_gb_col.xml.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\drawable\\ic_flag_gb_col.xml"
+    },
+    {
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_kb_sym_one.png.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\mipmap-hdpi\\ic_kb_sym_one.png"
+    },
+    {
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\xml_space_empty.xml.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\xml\\space_empty.xml"
+    },
+    {
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_ukr_shift_first.png.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\mipmap-hdpi\\ic_ukr_shift_first.png"
+    },
+    {
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_rus_small.png.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\mipmap-mdpi\\ic_rus_small.png"
+    },
+    {
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_ukr_shift_first_touch.png.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\mipmap-hdpi\\ic_ukr_shift_first_touch.png"
+    },
+    {
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\xml_symbol.xml.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\xml\\symbol.xml"
     }
 ]
