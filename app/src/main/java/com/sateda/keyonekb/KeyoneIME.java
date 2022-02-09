@@ -1977,7 +1977,7 @@ public class KeyoneIME extends InputMethodService
                 || getString(R.string.setting_application_updates_link).equals(key)
         ) {
             ReplacerService.log("Setting changed: " + key);
-            UpdateNotify();
+            UpdateNotify(true);
         }
 
         // Updates settings

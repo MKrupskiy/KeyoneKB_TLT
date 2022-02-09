@@ -87,7 +87,7 @@ public enum Language {
                 }
             }
         }
-        return null;
+        return Unknown;
     }
 
     public boolean isRus() {
