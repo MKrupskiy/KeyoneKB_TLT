@@ -2,8 +2,8 @@
 
     <PreferenceCategory android:title="@string/pref_h2_ctrl_emulation">
         <SwitchPreference
+            android:enabled="false"
             android:defaultValue="false"
-
             android:key="@string/setting_key2emulation_enabled"
             android:summary="@string/pref_description_key2emulation_enabled"
             android:title="@string/pref_title_key2emulation_enabled" />
@@ -11,12 +11,14 @@
 
     <PreferenceCategory android:title="@string/pref_h2_logging">
         <SwitchPreference
+            android:enabled="false"
             android:defaultValue="false"
             android:key="@string/setting_is_show_info"
             android:summary="@string/pref_description_is_show_info"
             android:title="@string/pref_title_is_show_info" />
 
         <SwitchPreference
+            android:enabled="false"
             android:defaultValue="false"
             android:key="@string/setting_is_log_to_sd"
             android:summary="@string/pref_description_is_log_to_sd"

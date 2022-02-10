@@ -87,14 +87,14 @@ public enum Language {
                 }
             }
         }
-        return null;
+        return Unknown;
     }
 
     public boolean isRus() {
-        return this == Language.Ru || this == Language.RuTrans || this == Language.RuFull || this == Language.RuQwertz;
+        return this == Language.Ru || this == Language.RuTrans || this == Language.RuFull || this == Language.RuQwertz || this == RuFxtecPro1;
     }
     public boolean isEng() {
-        return this == Language.En || this == Language.EnTrans || this == Language.EnFull || this == Language.EnQwertz;
+        return this == Language.En || this == Language.EnTrans || this == Language.EnFull || this == Language.EnQwertz || this == EnFxtecPro1;
     }
     public Language getOpposite() {
         switch (this) {
@@ -114,6 +114,10 @@ public enum Language {
                 return RuQwertz;
             case RuQwertz:
                 return EnQwertz;
+            case EnFxtecPro1:
+                return RuFxtecPro1;
+            case RuFxtecPro1:
+                return EnFxtecPro1;
             default:
                 return Unknown;
         }

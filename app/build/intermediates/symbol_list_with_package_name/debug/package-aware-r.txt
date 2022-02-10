@@ -1719,6 +1719,7 @@ xml method
 xml navigation
 xml russian_hw
 xml russian_translit_hw
+xml russian_usb_hw
 xml space_empty
 xml symbol
 xml tlt_pref_application

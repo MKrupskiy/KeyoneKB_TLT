@@ -2,10 +2,12 @@
 
     <PreferenceCategory android:title="@string/pref_h2_save_settings_to_file">
         <Preference
+            android:enabled="false"
             android:key="@string/setting_save_settings_to_file"
             android:title="@string/pref_title_save_settings_to_file"/>
 
         <Preference
+            android:enabled="false"
             android:key="@string/setting_restore_settings_from_file"
             android:title="@string/pref_title_restore_settings_from_file"/>
 

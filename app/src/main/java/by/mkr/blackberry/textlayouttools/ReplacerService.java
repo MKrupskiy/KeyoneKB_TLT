@@ -20,8 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class ReplacerService
-        implements SharedPreferences.OnSharedPreferenceChangeListener {
+public class ReplacerService {
 
     final static String LOG_TAG = "Tlt";
 
@@ -34,9 +33,6 @@ public class ReplacerService
         _context = context;
         _appSettings = new AppSettings(context);
         toggleVersionChecker(_appSettings.checkForUpdates.isOn());
-
-        SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(_context);
-        sharedPrefs.registerOnSharedPreferenceChangeListener(this);
 
         ReplacerService.log("init appSettings: " + _appSettings);
     }
@@ -93,6 +89,23 @@ public class ReplacerService
     }
 
 
+    public void toggleVersionChecker(boolean isEnabled) {
+        log("toggleVersionChecker: " + isEnabled);
+        _context.getPackageManager().setComponentEnabledSetting(
+                new ComponentName(_context, CheckVersionReceiver.class),
+                isEnabled ? PackageManager.COMPONENT_ENABLED_STATE_ENABLED : PackageManager.COMPONENT_ENABLED_STATE_DISABLED,
+                PackageManager.DONT_KILL_APP);
+        if (isEnabled) {
+            _checkVersionReceiver = new CheckVersionReceiver(_context.getApplicationContext(), isEnabled);
+            _checkVersionReceiver.setAlarm(_context.getApplicationContext());
+        } else {
+            if (_checkVersionReceiver != null) {
+                _checkVersionReceiver.cancelAlarm(_context.getApplicationContext());
+                _checkVersionReceiver = null;
+            }
+        }
+    }
+
     public static void log(String message) {
         Log.d(LOG_TAG, message);
         if (_appSettings != null && _appSettings.isLogToFile) {
@@ -128,76 +141,6 @@ public class ReplacerService
         return _context.getString(resId);
     }
 
-    @Override
-    public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
-        //Log.d(LOG_TAG, "Setting changed: " + key);
-
-        _appSettings.bindSettings(sharedPreferences);
-
-
-        // Preview Vibration
-        if (getString(R.string.setting_vibration_pattern_rus).equals(key)
-        ) {
-            //vibrate(Language.Ru, ActionType.AltEnter);
-        }
-        if (getString(R.string.setting_vibration_pattern_eng).equals(key)) {
-            //vibrate(Language.En, ActionType.AltEnter);
-        }
-
-        // Preview Input Sound
-        if (getString(R.string.setting_sound_input_rus).equals(key)) {
-            //playSound(Language.Ru, ActionType.AltEnter);
-        }
-        if (getString(R.string.setting_sound_input_eng).equals(key)) {
-            //playSound(Language.En, ActionType.AltEnter);
-        }
-
-        // Preview Correct Sound
-        if (getString(R.string.setting_sound_correct_rus).equals(key)) {
-            //playSound(Language.Ru, ActionType.ManualChange);
-        }
-        if (getString(R.string.setting_sound_correct_eng).equals(key)) {
-            //playSound(Language.En, ActionType.ManualChange);
-        }
-
-        // Icon settings
-        if (getString(R.string.setting_is_auto_correct).equals(key)
-                || getString(R.string.setting_when_enable_notifications).equals(key)
-                || getString(R.string.setting_shortcut_enabled_key).equals(key)
-                || getString(R.string.setting_application_updates_available_ver).equals(key)
-                || getString(R.string.setting_application_updates_link).equals(key)
-        ) {
-            //if (_notifyManager == null) {
-            //    _notifyManager = new NotifyManager(this);
-            //} else {
-            //    _notifyManager.updateNotificationButtons();
-            //}
-            //_notifyManager.updateNotification(_currentLanguage);
-        }
-
-        // Updates settings
-        if (getString(R.string.setting_application_updates_check).equals(key)
-        ) {
-            toggleVersionChecker(_appSettings.checkForUpdates.isOn());
-        }
-    }
-
-    private void toggleVersionChecker(boolean isEnabled) {
-        log("toggleVersionChecker: " + isEnabled);
-        _context.getPackageManager().setComponentEnabledSetting(
-                new ComponentName(_context, CheckVersionReceiver.class),
-                isEnabled ? PackageManager.COMPONENT_ENABLED_STATE_ENABLED : PackageManager.COMPONENT_ENABLED_STATE_DISABLED,
-                PackageManager.DONT_KILL_APP);
-        if (isEnabled) {
-            _checkVersionReceiver = new CheckVersionReceiver(_context.getApplicationContext(), isEnabled);
-            _checkVersionReceiver.setAlarm(_context.getApplicationContext());
-        } else {
-            if (_checkVersionReceiver != null) {
-                _checkVersionReceiver.cancelAlarm(_context.getApplicationContext());
-                _checkVersionReceiver = null;
-            }
-        }
-    }
 }
 
 
