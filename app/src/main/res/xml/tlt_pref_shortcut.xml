@@ -19,12 +19,14 @@
             android:summary="@string/pref_description_shortcut_enabled"
             android:title="@string/pref_title_shortcut_enabled" />
         <SwitchPreference
+            android:enabled="false"
             android:defaultValue="true"
             android:key="@string/setting_is_replace_alt_enter"
             android:dependency="@string/setting_shortcut_enabled_key"
             android:summary="@string/pref_description_is_replace_alt_enter"
             android:title="@string/pref_title_is_replace_alt_enter" />
         <ListPreference
+            android:enabled="false"
             android:defaultValue="129"
             android:entries="@array/pref_control_key_titles"
             android:entryValues="@array/pref_control_key_values"
@@ -51,6 +53,7 @@
 
     <PreferenceCategory android:title="@string/pref_h2_text_selection">
         <SwitchPreference
+            android:enabled="false"
             android:defaultValue="false"
             android:key="@string/setting_select_replaced"
             android:summary="@string/pref_description_select_replaced"
