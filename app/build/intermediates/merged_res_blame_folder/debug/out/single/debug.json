@@ -100,6 +100,10 @@
         "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\mipmap-hdpi\\ic_rus_shift_all_touch.png"
     },
     {
+        "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\xml_russian_usb_hw.xml.flat",
+        "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\xml\\russian_usb_hw.xml"
+    },
+    {
         "merged": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\build\\intermediates\\res\\merged\\debug\\raw_sound_click_xp.wav.flat",
         "source": "C:\\Users\\MikhailKrupski\\AndroidStudioProjects\\git\\KeyoneKB_TLT\\app\\src\\main\\res\\raw\\sound_click_xp.wav"
     },

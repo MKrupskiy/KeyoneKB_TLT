@@ -55,7 +55,7 @@ public class KeyoneIME extends InputMethodService
         SharedPreferences.OnSharedPreferenceChangeListener {
 
     private static final int MAX_KEY_COUNT = 50;
-    private static final boolean DEBUG = true;
+    private static final boolean DEBUG = false;
 
     public static final String APP_PREFERENCES = "kbsettings";
     public static final String APP_PREFERENCES_RU_LANG = "switch_ru_lang";
@@ -116,6 +116,7 @@ public class KeyoneIME extends InputMethodService
     private String lastPackageName = "";
 
     private float touchX;
+    private float touchY;
 
 
     // Props to check if a notification needs update
@@ -191,7 +192,7 @@ public class KeyoneIME extends InputMethodService
         mSettings = getSharedPreferences(APP_PREFERENCES, Context.MODE_PRIVATE);
         loadSetting();
         // Init Replacer service
-        _replacerService = new ReplacerService(this);
+        _replacerService = new ReplacerService(getApplicationContext());
         _appSettings = ReplacerService.getAppSettings();
 
         keyboard_empty = new Keyboard(this, R.xml.space_empty);
@@ -209,8 +210,8 @@ public class KeyoneIME extends InputMethodService
 
         // Init TLT props
         _lastActionType = ActionType.None;
-        _wordsListRu = new WordsList(this, Language.Ru);
-        _wordsListEn = new WordsList(this, Language.En);
+        _wordsListRu = new WordsList(getApplicationContext(), Language.Ru);
+        _wordsListEn = new WordsList(getApplicationContext(), Language.En);
         _vibrationManager = new VibrationManager(getApplicationContext());
         // Register settings listener
         SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
@@ -480,7 +481,6 @@ public class KeyoneIME extends InputMethodService
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
-        ReplacerService.log(" * onKeyDown: " + keyCode);
         keyboardView.hidePopup(false);
         Log.d(TAG, "onKeyDown "+event);
         if(fixBbkLauncher &&  !this.isInputViewShown() && event.getScanCode() != 11){
@@ -940,7 +940,6 @@ public class KeyoneIME extends InputMethodService
                     && keyCode != KeyEvent.KEYCODE_SHIFT_LEFT
                     && keyCode != KeyEvent.KEYCODE_SHIFT_RIGHT
                     && keyCode != KeyEvent.KEYCODE_ALT_LEFT
-                    && keyCode != KeyEvent.KEYCODE_SHIFT_RIGHT
                     && keyCode != KeyEvent.KEYCODE_META_LEFT
                     && keyCode != KeyEvent.KEYCODE_META_RIGHT) {
 
@@ -1370,6 +1369,39 @@ public class KeyoneIME extends InputMethodService
 
     @Override
     public boolean onGenericMotionEvent(MotionEvent event) {
+        /*
+        ReplacerService.log("onGenericMotionEvent: " + event.getAction());
+        int PRECISION = 16;
+        if(event.getAction() == MotionEvent.ACTION_DOWN) {
+            touchX = event.getX();
+            touchY = event.getY();
+        }
+        if(event.getAction() == MotionEvent.ACTION_MOVE) {
+            float curX = event.getX();
+            float curY = event.getY();
+
+            if (curX > touchX + PRECISION) {
+                // left
+                touchX = curX;
+                keyDownUp(KeyEvent.KEYCODE_DPAD_LEFT);
+            } else if (curX < touchX - PRECISION) {
+                // right
+                touchX = curX;
+                keyDownUp(KeyEvent.KEYCODE_DPAD_RIGHT);
+            }
+
+            if (curY > touchY + PRECISION) {
+                // up
+                touchY = curY;
+                keyDownUp(KeyEvent.KEYCODE_DPAD_UP);
+            } else if (curY < touchY - PRECISION) {
+                // down
+                touchY = curY;
+                keyDownUp(KeyEvent.KEYCODE_DPAD_DOWN);
+            }
+        }
+        */
+
         if (DEBUG) Log.v(TAG, "onGenericMotionEvent(): event " + event);
         if(pref_touch_keyboard){
             return false;
@@ -1705,12 +1737,12 @@ public class KeyoneIME extends InputMethodService
 
         // TLT action buttons
         NotificationCompat.Action actionSoundSwitch = LanguageNotificationReceiver
-                .createNotificationAction(this, LanguageNotificationReceiver.ACTION_MUTE_SWITCH);
+                .createNotificationAction(getApplicationContext(), LanguageNotificationReceiver.ACTION_MUTE_SWITCH);
         NotificationCompat.Action actionManualSwitch = LanguageNotificationReceiver
-                .createNotificationAction(this, LanguageNotificationReceiver.ACTION_MANUAL_SWITCH);
+                .createNotificationAction(getApplicationContext(), LanguageNotificationReceiver.ACTION_MANUAL_SWITCH);
         NotificationCompat.Action actionAutocorrectSwitch = LanguageNotificationReceiver
-                .createNotificationAction(this, LanguageNotificationReceiver.ACTION_AUTOCORRECT_SWITCH);
-        PendingIntent actionIntent = PendingIntent.getActivity(this, 0, new Intent(this, MainActivity.class), PendingIntent.FLAG_UPDATE_CURRENT);
+                .createNotificationAction(getApplicationContext(), LanguageNotificationReceiver.ACTION_AUTOCORRECT_SWITCH);
+        PendingIntent actionIntent = PendingIntent.getActivity(getApplicationContext(), 0, new Intent(getApplicationContext(), MainActivity.class), PendingIntent.FLAG_UPDATE_CURRENT);
         String subText = null;
         String contentText = null;
 
@@ -1970,6 +2002,8 @@ public class KeyoneIME extends InputMethodService
 
     @Override
     public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
+        _appSettings.bindSettings(sharedPreferences);
+
         if (getString(R.string.setting_is_auto_correct).equals(key)
                 || getString(R.string.setting_when_enable_notifications).equals(key)
                 || getString(R.string.setting_shortcut_enabled_key).equals(key)
@@ -1980,10 +2014,35 @@ public class KeyoneIME extends InputMethodService
             UpdateNotify(true);
         }
 
-        // Updates settings
-        if (getString(R.string.setting_application_updates_check).equals(key)
+        // Preview Vibration
+        if (getString(R.string.setting_vibration_pattern_rus).equals(key)
         ) {
+            //vibrate(Language.Ru, ActionType.AltEnter);
+        }
+        if (getString(R.string.setting_vibration_pattern_eng).equals(key)) {
+            //vibrate(Language.En, ActionType.AltEnter);
+        }
+
+        // Preview Input Sound
+        if (getString(R.string.setting_sound_input_rus).equals(key)) {
+            //playSound(Language.Ru, ActionType.AltEnter);
+        }
+        if (getString(R.string.setting_sound_input_eng).equals(key)) {
+            //playSound(Language.En, ActionType.AltEnter);
+        }
+
+        // Preview Correct Sound
+        if (getString(R.string.setting_sound_correct_rus).equals(key)) {
+            //playSound(Language.Ru, ActionType.ManualChange);
+        }
+        if (getString(R.string.setting_sound_correct_eng).equals(key)) {
+            //playSound(Language.En, ActionType.ManualChange);
+        }
+
+        // Updates settings
+        if (getString(R.string.setting_application_updates_check).equals(key)) {
             UpdateNotify(true);
+            _replacerService.toggleVersionChecker(_appSettings.checkForUpdates.isOn());
         }
     }
 }
