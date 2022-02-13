@@ -112,7 +112,6 @@
 
 
     <!-- Other: -->
-    <string name="setting_when_enable_notifications" translatable="false">Setting_When_Enable_Notifications</string>
     <string name="text_btn_mute_enable">Включить</string>
     <string name="text_btn_mute_switch">Звук</string>
     <string name="text_btn_autocorrect_switch">Автозамена</string>
@@ -201,6 +200,8 @@
     <string name="pref_h2_sound">Звук</string>
     <string name="pref_h2_vibration">Вибрация</string>
 
+    <string name="setting_is_sound_enabled" translatable="false">Setting_Is_Sound_Enabled</string>
+    <string name="pref_title_sound_enabled">Звук переключения</string>
     <string name="setting_vibration_pattern_rus" translatable="false">Setting_Vibration_Pattern_Rus</string>
     <string name="pref_title_vibration_pattern_rus">Переключение на русский</string>
     <string-array name="pref_vibration_pattern_key_titles">

@@ -29,7 +29,6 @@ import android.view.textservice.SuggestionsInfo;
 import android.widget.Toast;
 import org.xmlpull.v1.XmlPullParser;
 import java.io.File;
-import java.util.Calendar;
 
 import by.mkr.blackberry.textlayouttools.ActionType;
 import by.mkr.blackberry.textlayouttools.AppSettings;
@@ -256,7 +255,7 @@ public class KeyoneIME extends InputMethodService
 
                 _appSettings.isEnabled,
                 _appSettings.isAutoCorrect,
-                _appSettings.whenEnableNotifications
+                _appSettings.isSoundEnabled
         );
     }
     private boolean notificationPropsHaveChanged(NotificationProperties compareTo) {
@@ -275,7 +274,7 @@ public class KeyoneIME extends InputMethodService
 
                 && _appSettings.isEnabled == compareTo.isEnabled
                 && _appSettings.isAutoCorrect == compareTo.isAutoCorrect
-                && _appSettings.whenEnableNotifications == compareTo.whenEnableNotifications
+                && _appSettings.isSoundEnabled == compareTo.isSoundEnabled
         );
     }
 
@@ -1284,6 +1283,16 @@ public class KeyoneIME extends InputMethodService
 
     }
 
+    private boolean setKeyboardKeyLabel(Keyboard keyboard, int keyIndex, String newLabel) {
+        if (keyIndex < keyboard.getKeys().size()) {
+            keyboard.getKeys().get(keyIndex).label = newLabel;
+            return true;
+        } else {
+            ReplacerService.log("setKeyboardKeyLabel: key not found: " + keyIndex);
+            return false;
+        }
+    }
+
     private void playClick(int i){
 
         AudioManager audioManager = (AudioManager) getSystemService(AUDIO_SERVICE);
@@ -1886,7 +1895,7 @@ public class KeyoneIME extends InputMethodService
     }
 
     public boolean isNotificationsEnabled() {
-        return _appSettings.whenEnableNotifications <= Calendar.getInstance().getTimeInMillis();
+        return _appSettings.isSoundEnabled;
     }
 
     private void playSound(Language lang, ActionType actionType) {
@@ -2005,7 +2014,7 @@ public class KeyoneIME extends InputMethodService
         _appSettings.bindSettings(sharedPreferences);
 
         if (getString(R.string.setting_is_auto_correct).equals(key)
-                || getString(R.string.setting_when_enable_notifications).equals(key)
+                || getString(R.string.setting_is_sound_enabled).equals(key)
                 || getString(R.string.setting_shortcut_enabled_key).equals(key)
                 || getString(R.string.setting_application_updates_available_ver).equals(key)
                 || getString(R.string.setting_application_updates_link).equals(key)

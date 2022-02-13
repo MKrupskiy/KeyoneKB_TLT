@@ -15,7 +15,7 @@ public class NotificationProperties {
 
     public boolean isEnabled;
     public boolean isAutoCorrect;
-    public long whenEnableNotifications;
+    public boolean isSoundEnabled;
 
     public NotificationProperties(
             boolean _navigationSymbol,
@@ -32,7 +32,7 @@ public class NotificationProperties {
 
             boolean _isEnabled,
             boolean _isAutoCorrect,
-            long _whenEnableNotifications
+            boolean _isSoundEnabled
     ) {
         navigationSymbol = _navigationSymbol;
         fnSymbol = _fnSymbol;
@@ -48,6 +48,6 @@ public class NotificationProperties {
 
         isEnabled = _isEnabled;
         isAutoCorrect = _isAutoCorrect;
-        whenEnableNotifications = _whenEnableNotifications;
+        isSoundEnabled = _isSoundEnabled;
     }
 }

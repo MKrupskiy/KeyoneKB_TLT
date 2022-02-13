@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Keyboard xmlns:android="http://schemas.android.com/apk/res/android"
+    android:keyWidth="10%p"
+    android:horizontalGap="0px"
+    android:verticalGap="0px"
+    android:keyHeight="50dp">
+
+
+    <Row xmlns:android="http://schemas.android.com/apk/res/android">
+        <Key android:keyLabel="й"
+            android:keyWidth="10%p"
+            android:keyEdgeFlags="left"
+            android:codes="1081"/>
+
+        <Key android:keyLabel="ц"
+            android:keyWidth="8.33%p"
+            android:codes="1094"/>
+
+        <Key android:keyLabel="у"
+            android:keyWidth="8.33%p"
+            android:codes="1091"/>
+
+        <Key android:keyLabel="к"
+            android:keyWidth="8.33%p"
+            android:codes="1082"/>
+
+        <Key android:keyLabel="е"
+            android:keyWidth="8.33%p"
+            android:codes="1077"/>
+
+        <Key android:keyLabel="н"
+            android:keyWidth="8.33%p"
+            android:codes="1085"/>
+
+        <Key android:keyLabel="г"
+            android:keyWidth="8.33%p"
+            android:codes="1075"/>
+
+        <Key android:keyLabel="ш"
+            android:keyWidth="8.33%p"
+            android:codes="1096"/>
+
+        <Key android:keyLabel="щ"
+            android:keyWidth="8.33%p"
+            android:codes="1097"/>
+
+        <Key android:keyLabel="з"
+            android:keyWidth="8.33%p"
+            android:codes="1079"/>
+
+        <Key android:keyLabel="х"
+            android:keyWidth="8.33%p"
+            android:codes="1093"/>
+
+        <Key android:keyLabel="ъ"
+            android:keyWidth="8.33%p"
+            android:keyEdgeFlags="right"
+            android:codes="1098"/>
+    </Row>
+
+</Keyboard>

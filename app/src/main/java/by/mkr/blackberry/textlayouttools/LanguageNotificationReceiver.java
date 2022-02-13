@@ -28,8 +28,8 @@ public class LanguageNotificationReceiver extends BroadcastReceiver {
         switch (action) {
             case ACTION_MUTE_SWITCH: {
                 boolean soundEnabled = !getIsSoundEnabled();
-                updateMuted(context, soundEnabled ? -1 : Integer.MAX_VALUE);
-                showOffToUser(context, soundEnabled ? -1 : Integer.MAX_VALUE);
+                updateMuted(context, soundEnabled);
+                showOffToUser(context, soundEnabled);
                 break;
             }
             case ACTION_MANUAL_SWITCH: {
@@ -107,10 +107,10 @@ public class LanguageNotificationReceiver extends BroadcastReceiver {
         return now.getTimeInMillis();
     }
 
-    private static void updateMuted(Context context, int hoursCount) {
+    private static void updateMuted(Context context, boolean isActive) {
         SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(context);
         SharedPreferences.Editor prefsEditor = sharedPrefs.edit();
-        prefsEditor.putLong(context.getString(R.string.setting_when_enable_notifications), addHours(hoursCount));
+        prefsEditor.putBoolean(context.getString(R.string.setting_is_sound_enabled), isActive);
         prefsEditor.apply();
     }
 
@@ -141,7 +141,7 @@ public class LanguageNotificationReceiver extends BroadcastReceiver {
         boolean soundEnabled = true;
         AppSettings appSettings = ReplacerService.getAppSettings();
         if (appSettings != null) {
-            soundEnabled = appSettings.whenEnableNotifications <= new Date().getTime();
+            soundEnabled = appSettings.isSoundEnabled;
         }
         return soundEnabled;
     }
@@ -155,12 +155,11 @@ public class LanguageNotificationReceiver extends BroadcastReceiver {
         return manualChangeEnabled;
     }
 
-    private static void showOffToUser(Context context, int hours) {
-        if (hours <= 0) {
-            Toast.makeText(context, context.getString(R.string.text_toast_mute_enable), Toast.LENGTH_SHORT).show();
-        } else {
-            Toast.makeText(context, context.getString(R.string.text_toast_mute_disable), Toast.LENGTH_SHORT).show();
-        }
+    private static void showOffToUser(Context context, boolean isActive) {
+        String text = isActive
+                ? context.getString(R.string.text_toast_mute_enable)
+                : context.getString(R.string.text_toast_mute_disable);
+        Toast.makeText(context, text, Toast.LENGTH_SHORT).show();
     }
 
     private static void showOnOffAutocorrectToUser(Context context, boolean isActive) {

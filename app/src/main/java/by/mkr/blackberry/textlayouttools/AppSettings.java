@@ -34,10 +34,11 @@ public class AppSettings {
     public boolean isTranslit;
     public boolean isShowInfo;
     public boolean isReplaceAltEnter;
-    public boolean isCorrectDoubled;
+    //public boolean isCorrectDoubled;
     public boolean isAutoCorrect;
     public boolean isLogToFile;
     public boolean isSelectReplaced;
+    public boolean isSoundEnabled;
     public String[] userDict;
 
     public VibrationPattern vibrationPatternRus;
@@ -50,7 +51,7 @@ public class AppSettings {
 
     public List<CorrectionItem> corrections;
 
-    public transient long whenEnableNotifications;
+    //public transient long whenEnableNotifications;
     public transient UserTempDictionary userTempDict;
 
     public transient String availableUpdateVersion;
@@ -107,7 +108,7 @@ public class AppSettings {
         String soundCorrectEngStr = sharedPrefs.getString(_context.getString(R.string.setting_sound_correct_eng), "En");
         soundCorrectEng = SoundPattern.fromString(soundCorrectEngStr);
 
-        whenEnableNotifications = sharedPrefs.getLong(_context.getString(R.string.setting_when_enable_notifications), 0);
+        isSoundEnabled = sharedPrefs.getBoolean(_context.getString(R.string.setting_is_sound_enabled), true);
 
         String InputMethodStr = sharedPrefs.getString(_context.getString(R.string.setting_input_method), InputMethod.getDefault());
         inputMethod = InputMethod.fromString(InputMethodStr);
@@ -285,6 +286,7 @@ public class AppSettings {
             edit.putBoolean(getString(R.string.setting_is_auto_correct), newSettings.isAutoCorrect);
             edit.putBoolean(getString(R.string.setting_is_log_to_sd), newSettings.isLogToFile);
             edit.putBoolean(getString(R.string.setting_select_replaced), newSettings.isSelectReplaced);
+            edit.putBoolean(getString(R.string.setting_is_sound_enabled), newSettings.isSoundEnabled);
             if (newSettings.userDict != null) {
                 edit.putString(getString(R.string.setting_user_dictionary), TextUtils.join("\n", newSettings.userDict));
             }
@@ -306,8 +308,6 @@ public class AppSettings {
             if (newSettings.soundCorrectEng != null) {
                 edit.putString(getString(R.string.setting_sound_correct_eng), "" + newSettings.soundCorrectEng);
             }
-            // Skip as it's temporary
-            //whenEnableNotifications = sharedPrefs.getLong(_context.getString(R.string.setting_when_enable_notifications), 0);
             if (newSettings.inputMethod != null) {
                 edit.putString(getString(R.string.setting_input_method), "" + newSettings.inputMethod);
             }

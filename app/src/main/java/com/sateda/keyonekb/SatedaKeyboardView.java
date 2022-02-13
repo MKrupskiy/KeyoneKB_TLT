@@ -355,8 +355,8 @@ public class SatedaKeyboardView extends KeyboardView {
                             Drawable langIcon = getResources().getDrawable(lang.compareTo("English") == 0
                                     ? R.drawable.ic_flag_gb_col
                                     : lang.compareTo("Русский") == 0
-                                    ? R.drawable.ic_flag_russia_col
-                                    : R.drawable.ic_flag_ukraine_col);
+                                        ? R.drawable.ic_flag_russia_col
+                                        : R.drawable.ic_flag_ukraine_col);
                             //Log.d("Tlt", "lang: " + lang + "; draw_lang: " + draw_lang);
                             canvas.drawBitmap(IconsHelper.drawableToBitmap(langIcon), key.x + (key.width / 2) - 210, key.y + 34, paint_white);
                         } catch (Exception ex) {
